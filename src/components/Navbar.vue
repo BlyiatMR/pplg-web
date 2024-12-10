@@ -22,7 +22,7 @@
     };
 </script>
 <template>
-    <nav class="max-w-[1440px] mx-28 pt-5">
+    <nav class="max-w-[1440px] mx-auto pt-5">
       <div class="hidden lg:flex text-white justify-between items-center flex">
         <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
         <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
