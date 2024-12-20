@@ -1,5 +1,6 @@
 <script setup>
 import NavbarVue from '@/components/Navbar.vue';
+import HeroSection from '@/components/HomeComponent/HeroSection.vue'
 
 </script>
 <script>
@@ -62,23 +63,7 @@ export default {
 
       <NavbarVue />
 
-      <section class="max-w-[1280px] mx-auto flex flex-wrap justify-between z-50 h-[42rem] mt-10">
-        <div class="max-w-2xl space-y-5 pt-24">
-          <h1 id="title" class="text-6xl text-white font-semibold tracking-wide leading-tight">Pengembangan Perangkat Lunak dan Game</h1>
-          <h3 id="description" class="text-base text-white tracking-wide">Jurusan IT Kekinian Menjadi Ahli Teknologi Masa Depan Pembelajaran yang berfokus pada tren teknologi terkini dan praktik industri</h3>
-          <div class="flex pt-10 gap-10">
-            <a id="btn" href="#about" class="flex w-[270px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[280px] duration-300">Jelajahi Jurusan PPLG <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9"><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg></a>
-          </div>
-        </div>
-        <div class="flex">
-          <img id="imgs" class="w-[38rem] -z-50" src="/src/assets/images/actr.png" alt="">
-        </div>
-        <!-- <div class="flex pt-20">
-          <div class="max-w-fit p-5 bg-[#9167E2] rounded-xl h-fit">
-            <img class="rounded-lg w-96" src="/src/assets/images/pict-1.jpg" alt="">
-          </div>
-        </div> -->
-      </section>
+      <HeroSection />
 
       <section class="bg-slate-50 py-20 space-y-20">
         <div class="max-w-[1280px] mx-auto">
@@ -92,10 +77,21 @@ export default {
           </div>
         </div> -->
           <div id="about" class="flex flex-wrap items-center justify-between">
-            <img class="object-cover object-top rounded-tl-2xl rounded-tr-[10rem] rounded-bl-[10rem] rounded-br-2xl w-[37rem] h-[20rem]" src="/src/assets/images/class.jpg" alt="">
+            <div class="relative">
+              <div class="w-fit bg-[#7743DB] rounded-3xl py-2 px-5 absolute top-5 right-0 flex items-center gap-5">
+                <svg class="w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"><path class="fill-white" d="M7.5 7a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5m0-4C6.67 3 6 3.67 6 4.5S6.67 6 7.5 6S9 5.33 9 4.5S8.33 3 7.5 3"/><path class="fill-white" d="M13.5 11c-.28 0-.5-.22-.5-.5s.22-.5.5-.5s.5-.22.5-.5A2.5 2.5 0 0 0 11.5 7h-1c-.28 0-.5-.22-.5-.5s.22-.5.5-.5c.83 0 1.5-.67 1.5-1.5S11.33 3 10.5 3c-.28 0-.5-.22-.5-.5s.22-.5.5-.5A2.5 2.5 0 0 1 13 4.5c0 .62-.22 1.18-.6 1.62c1.49.4 2.6 1.76 2.6 3.38c0 .83-.67 1.5-1.5 1.5m-12 0C.67 11 0 10.33 0 9.5c0-1.62 1.1-2.98 2.6-3.38c-.37-.44-.6-1-.6-1.62A2.5 2.5 0 0 1 4.5 2c.28 0 .5.22.5.5s-.22.5-.5.5C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6c.28 0 .5.22.5.5s-.22.5-.5.5h-1A2.5 2.5 0 0 0 1 9.5c0 .28.22.5.5.5s.5.22.5.5s-.22.5-.5.5m9 3h-6c-.83 0-1.5-.67-1.5-1.5v-1C3 9.57 4.57 8 6.5 8h2c1.93 0 3.5 1.57 3.5 3.5v1c0 .83-.67 1.5-1.5 1.5m-4-5A2.5 2.5 0 0 0 4 11.5v1c0 .28.22.5.5.5h6c.28 0 .5-.22.5-.5v-1A2.5 2.5 0 0 0 8.5 9z"/></svg> 
+                <p class="text-base font-semibold text-white">200+ Alumni</p></div>
+              <img class="object-cover object-top rounded-tl-2xl rounded-tr-[10rem] rounded-bl-[10rem] rounded-br-2xl w-[37rem] h-[20rem]" src="/src/assets/images/class.jpg" alt="">
+              <div class="w-fit bg-[#7743DB] rounded-3xl py-2 px-5 absolute bottom-5 flex items-center gap-5">
+                <svg class="w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"><path class="fill-white" d="M7.5 7a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5m0-4C6.67 3 6 3.67 6 4.5S6.67 6 7.5 6S9 5.33 9 4.5S8.33 3 7.5 3"/><path class="fill-white" d="M13.5 11c-.28 0-.5-.22-.5-.5s.22-.5.5-.5s.5-.22.5-.5A2.5 2.5 0 0 0 11.5 7h-1c-.28 0-.5-.22-.5-.5s.22-.5.5-.5c.83 0 1.5-.67 1.5-1.5S11.33 3 10.5 3c-.28 0-.5-.22-.5-.5s.22-.5.5-.5A2.5 2.5 0 0 1 13 4.5c0 .62-.22 1.18-.6 1.62c1.49.4 2.6 1.76 2.6 3.38c0 .83-.67 1.5-1.5 1.5m-12 0C.67 11 0 10.33 0 9.5c0-1.62 1.1-2.98 2.6-3.38c-.37-.44-.6-1-.6-1.62A2.5 2.5 0 0 1 4.5 2c.28 0 .5.22.5.5s-.22.5-.5.5C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6c.28 0 .5.22.5.5s-.22.5-.5.5h-1A2.5 2.5 0 0 0 1 9.5c0 .28.22.5.5.5s.5.22.5.5s-.22.5-.5.5m9 3h-6c-.83 0-1.5-.67-1.5-1.5v-1C3 9.57 4.57 8 6.5 8h2c1.93 0 3.5 1.57 3.5 3.5v1c0 .83-.67 1.5-1.5 1.5m-4-5A2.5 2.5 0 0 0 4 11.5v1c0 .28.22.5.5.5h6c.28 0 .5-.22.5-.5v-1A2.5 2.5 0 0 0 8.5 9z"/></svg> 
+                <p class="text-base font-semibold text-white">100+ Siswa</p></div>
+            </div>
             <div class="max-w-xl space-y-5">
               <h1 class="max-w-7xl mx-auto font-semibold text-4xl text-slate-800 leading-tight">Tentang Jurusan PPLG</h1>
-              <p class="text-base text-slate-800 tracking-wide">Jurusan PPLG salah satu program keahlian SMK Negeri 1 Pangkep di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game). <br><br> Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern.</p>
+              <p class="text-base font-medium text-slate-600">Jurusan PPLG salah satu program keahlian SMK Negeri 1 Pangkep di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game). <br><br> Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern.</p>
+              <div class="flex pt-5 gap-10">
+                <a id="btn" href="#about" class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300">Lebih Detail <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9"><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg></a>
+              </div>
             </div>
           </div>
           <h1 class="max-w-7xl mx-auto text-center mt-20 font-semibold text-4xl text-slate-800 leading-tight">Program Keahlian</h1>

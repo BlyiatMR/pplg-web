@@ -23,7 +23,7 @@
 </script>
 <template>
     <nav class="border-b border-white border-opacity-10 pb-5">
-      <div class="max-w-[1280px] mx-auto pt-5">
+      <div class="max-w-[1280px] mx-auto pt-5 max-xl:mx-10">
         <div class="hidden lg:flex text-white justify-between items-center flex">
           <div>
             <img class="w-16" src="/src/assets/images/pplg-logo.png" alt="">
