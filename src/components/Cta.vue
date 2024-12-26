@@ -1,6 +1,6 @@
 <template>
     <section class="bg-slate-50 pb-20">
-        <div class="max-w-[1280px] relative overflow-hidden mx-auto max-xl:mx-10 pt-32">
+        <div class="max-w-[1280px] relative overflow-hidden mx-auto max-xl:mx-5 pt-32">
           <div class="w-[40rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
           <div class="w-[50rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
           <img class="absolute right-10 top-0 w-[20rem] max-sm:hidden" src="/src/assets/images/boy-second.png" alt="">

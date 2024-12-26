@@ -1,6 +1,6 @@
 <template>
     <section class="bg-slate-50 py-20 space-y-20">
-        <div class="max-w-[1280px] mx-auto max-xl:mx-10">
+        <div class="max-w-[1280px] mx-auto max-xl:mx-5">
           <div id="about" class="flex flex-wrap max-sm:gap-10 items-center justify-between">
             <div class="relative">
               <div class="w-fit bg-[#7743DB] rounded-3xl py-2 px-5 absolute top-5 right-0 flex items-center gap-5">
@@ -26,7 +26,7 @@
               <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
               <div class="mt-5">
                 <h1 class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">{{ item.title }}</h1>
-                <p class="w-72 mt-2 text-base text-slate-600 group-hover:text-white duration-300">{{ item.description }}</p>
+                <p class="sm:w-72 w-fit mt-2 text-base text-slate-600 group-hover:text-white duration-300">{{ item.description }}</p>
               </div>
             </div>
           </div>
