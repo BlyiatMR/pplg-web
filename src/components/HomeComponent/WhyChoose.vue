@@ -31,22 +31,22 @@ export default {
         {
           title: "Kurikulum Up-to-date",
           description: "Kurikulum dirancang agar sejalan dengan perkembangan teknologi terkini, menjadikan siswa siap bersaing di pasar kerja.",
-          src: "/src/assets/images/icon/icon-curicullum.png",
+          src: "assets/images/icon/icon-curicullum.png",
         },
         {
           title: "Fasilitas Komputer",
           description: "Menyediakan lab komputer yang dirancang mendukung pengalaman belajar sesuai dengan kebutuhan industri saat ini.",
-          src: "/src/assets/images/icon/icon-computer.png",
+          src: "assets/images/icon/icon-computer.png",
         },
         {
           title: "Peluang Karir Luas",
           description: "Membuka jalan untuk berbagai profesi seperti web developer, mobile developer, UI/UX designer, atau pengembang IoT.",
-          src: "/src/assets/images/icon/icon-job.png",
+          src: "assets/images/icon/icon-job.png",
         },
         {
           title: "Kegiatan Ekstrakurikuler",
           description: "Memiliki ekstrakurikuler Zone IT, yang berfokus pada pembuatan website, mulai dari desain hingga pemrograman.",
-          src: "/src/assets/images/icon/icon-people.png",
+          src: "assets/images/icon/icon-people.png",
         },
       ]
     };
