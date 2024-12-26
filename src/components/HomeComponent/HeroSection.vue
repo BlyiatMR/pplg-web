@@ -1,5 +1,5 @@
 <template>
-    <section class="max-w-[1280px] mx-auto max-xl:mx-10 flex flex-wrap sm:justify-between justify-start z-50 h-[42rem] mt-10">
+    <section class="max-w-[1280px] mx-auto max-xl:mx-5 flex flex-wrap sm:justify-between justify-start z-50 h-[42rem] mt-10">
         <div class="sm:max-w-2xl w-fit space-y-5 sm:pt-24 pt-10">
           <h1 id="title" class="sm:text-6xl text-3xl text-white font-semibold tracking-wide leading-tight">Pengembangan Perangkat Lunak dan Game</h1>
           <h3 id="description" class="text-base text-white tracking-wide">Jurusan IT Kekinian Menjadi Ahli Teknologi Masa Depan Pembelajaran yang berfokus pada tren teknologi terkini dan praktik industri</h3>
