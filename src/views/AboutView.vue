@@ -129,32 +129,32 @@ export default {
     return {
       profiles: [
         {
-          img: "/src/assets/images/teacher/pak_idris.jpeg",
+          img: "../src/assets/images/teacher/pak_idris.jpeg",
           name: "Idris Suyupi",
           position: "Ketua Jurusan & Guru Produktif",
         },
         {
-          img: "/src/assets/images/teacher/bu_sartika.jpeg",
+          img: "../src/assets/images/teacher/bu_sartika.jpeg",
           name: "Sartika",
           position: "Guru Produktif",
         },
         {
-          img: "/src/assets/images/teacher/bu_aisyah.jpeg",
+          img: "../src/assets/images/teacher/bu_aisyah.jpeg",
           name: "Nur Aisyah Abdullah",
           position: "Guru Produktif",
         },
         {
-          img: "/src/assets/images/teacher/bu_sul.jpeg",
+          img: "../src/assets/images/teacher/bu_sul.jpeg",
           name: "Sulfitriani",
           position: "Wali Kelas XI PPLG",
         },
         {
-          img: "/src/assets/images/teacher/bu_ermi.jpeg",
+          img: "../src/assets/images/teacher/bu_ermi.jpeg",
           name: "Ermiwati Sahwa",
           position: "Wali Kelas XII PPLG",
         },
         {
-          img: "/src/assets/images/teacher/bu_indah.jpeg",
+          img: "../src/assets/images/teacher/bu_indah.jpeg",
           name: "Indah Purnama Syahir",
           position: "Guru Produktif & Wali Kelas X PPLG",
         },
