@@ -42,12 +42,6 @@ export default {
           { opacity: 0, x: 50 },
           { opacity: 1, x: 0, duration: 1 },
           "-=0.5"
-        )
-        .fromTo(
-          "#btn",
-          { opacity: 0, x: 50 },
-          { opacity: 1, x: 0, duration: 1 },
-          "-=0.5"
         );
     },
   },

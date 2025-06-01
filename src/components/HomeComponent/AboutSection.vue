@@ -1,30 +1,56 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const typingText = ref(null)
+
+onMounted(() => {
+  const message = '. . .Tempatnya Para Developer Muda Berkembang dan Berkarya. . .'
+  const letters = message.split('')
+
+  typingText.value.innerHTML = ''
+
+  letters.forEach((char) => {
+    const span = document.createElement('span')
+    span.textContent = char
+    span.style.opacity = 0
+    typingText.value.appendChild(span)
+  })
+
+  const spans = typingText.value.querySelectorAll('span')
+
+  gsap.to(spans, {
+    opacity: 1,
+    duration: 0.05,
+    stagger: 0.05,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: typingText.value,
+      start: 'top 80%', 
+      toggleActions: 'play none none none',
+    }
+  })
+})
+</script>
+
 <template>
-    <section class="bg-white py-20 space-y-20">
+    <section class="bg-[#F8FAFC] py-20 space-y-20">
         <div class="max-w-[1280px] mx-auto max-xl:mx-5">
-          <div id="about" class="flex flex-wrap max-sm:gap-10 items-center justify-between">
-            <div class="relative">
-              <div class="w-fit bg-[#7743DB] rounded-3xl py-2 px-5 absolute top-5 right-0 flex items-center gap-5">
-                <img src="/src/assets/images/icon/icon-people.png" class="w-10" alt="">
-                <p class="text-base font-semibold text-white">200+ Alumni</p></div>
-              <img class="object-cover object-top rounded-tl-2xl rounded-tr-[10rem] rounded-bl-[10rem] rounded-br-2xl w-[37rem] h-[20rem]" src="/src/assets/images/class.jpg" alt="">
-              <div class="w-fit bg-[#7743DB] rounded-3xl py-2 px-5 absolute bottom-5 flex items-center gap-5">
-                <img src="/src/assets/images/icon/icon-people.png" class="w-10" alt="">
-                <p class="text-base font-semibold text-white">100+ Siswa</p></div>
-            </div>
-            <div class="max-w-xl space-y-5">
-              <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">Tentang Jurusan PPLG</h1>
-              <p class="text-base font-medium text-slate-600">Jurusan Pengembangan Perangkat Lunak dan Gim salah satu program keahlian SMK Negeri 1 Pangkajene dan Kepulauan di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game). <br><br> Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern.</p>
-              <div class="flex pt-5 gap-10">
+          <div id="about" class="">
+            <div class="sm:space-y-16 space-y-6">
+              <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-3xl text-slate-800 tracking-wide"></h1>
+              <div class="flex justify-center pt-5 gap-10">
                 <a id="btn" href="/about" class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300">Lebih Detail <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9"><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg></a>
               </div>
             </div>
           </div>
-          <h1 class="max-w-7xl mx-auto text-center mt-20 font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">Program Keahlian</h1>
-          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-10">
-
-            <div v-for="(item, index) in items" :key="index" class="group hover:bg-[#7743DB] hover:-translate-y-2 duration-300 py-5 px-6 rounded-3xl">
+          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28">
+            <div v-for="(item, index) in items" :key="index" class="relative overflow-hidden group hover:bg-[#7743DB] hover:-translate-y-2 duration-300 py-5 px-6 rounded-3xl">
               <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
-              <div class="mt-5">
+              <div class="mt-5 cursor-default">
                 <h1 class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">{{ item.title }}</h1>
                 <p class="sm:w-72 w-fit mt-2 text-base text-slate-600 group-hover:text-white duration-300">{{ item.description }}</p>
               </div>
@@ -50,16 +76,22 @@ export default {
                 </g>`
         },
         {
-          title: "UI/UX",
-          description: "Mendesain antarmuka menarik dan user-friendly.",
-          viewBox: "0 0 16 16",
-          icon: `<path class="fill-slate-800 group-hover:fill-white duration-300" d="M11.5 4a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM11 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/><path class="fill-slate-800 group-hover:fill-white duration-300" fill-rule="evenodd" d="M3 1C1.34 1 0 2.34 0 4v8c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm10 1h-3v12h3c1.1 0 2-.895 2-2V4c0-1.1-.895-2-2-2M3 2h6v12H3c-1.1 0-2-.895-2-2V4c0-1.1.895-2 2-2" clip-rule="evenodd"/>`
+          title: "Game Development",
+          description: "Membuat game interaktif dengan tools dan kreativitas.",
+          viewBox: "0 0 24 24",
+          icon: `<path fill="none" class="stroke-slate-800 group-hover:stroke-white duration-300" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 14.5c0-3.287 0-4.931.908-6.038a4 4 0 0 1 .554-.554C4.57 7 6.212 7 9.5 7h5c3.288 0 4.931 0 6.038.908a4 4 0 0 1 .554.554C22 9.57 22 11.212 22 14.5s0 4.931-.908 6.038a4 4 0 0 1-.554.554C19.43 22 17.788 22 14.5 22h-5c-3.287 0-4.931 0-6.038-.908a4 4 0 0 1-.554-.554C2 19.43 2 17.788 2 14.5M12 7V5a1 1 0 0 1 1-1a1 1 0 0 0 1-1V2m-4 14l-1.5-1.5m0 0L7 13m1.5 1.5L7 16m1.5-1.5L10 13m7 2.5v-2" color="currentColor"/>`
         },
         {
           title: "Mobile Development",
           description: "Membangun aplikasi Android sesuai standar industri.",
           viewBox: "0 0 24 24",
           icon: `<path fill="none" class="stroke-slate-800 group-hover:stroke-white duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8c.01-2.644.108-4.059 1.024-4.975C7.049 2 8.699 2 11.999 2s4.95 0 5.975 1.025c.916.916 1.013 2.33 1.023 4.975M5 16c.01 2.644.108 4.059 1.024 4.975C7.049 22 8.699 22 11.999 22s4.95 0 5.975-1.025c.916-.916 1.013-2.33 1.023-4.975M11 19h2m3-9l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L16 14m-8-4l-1.227 1.057C6.258 11.502 6 11.724 6 12s.258.498.773.943L8 14m5-5l-2 6" color="currentColor"/>`
+        },
+        {
+          title: "UI/UX Design",
+          description: "Mendesain antarmuka menarik dan user-friendly.",
+          viewBox: "0 0 16 16",
+          icon: `<path class="fill-slate-800 group-hover:fill-white duration-300" d="M11.5 4a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM11 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/><path class="fill-slate-800 group-hover:fill-white duration-300" fill-rule="evenodd" d="M3 1C1.34 1 0 2.34 0 4v8c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm10 1h-3v12h3c1.1 0 2-.895 2-2V4c0-1.1-.895-2-2-2M3 2h6v12H3c-1.1 0-2-.895-2-2V4c0-1.1.895-2 2-2" clip-rule="evenodd"/>`
         },
         {
           title: "IoT",

@@ -7,7 +7,7 @@
           <div class="w-[105rem] h-[85rem] border border-white rounded-full absolute -top-[10rem] -right-[30rem] opacity-10 -z-50"></div>
           <div class="w-[125rem] h-[85rem] border border-white rounded-full absolute -top-[10rem] -right-[30rem] opacity-10 -z-50"></div>
 
-          <h1 class="sm:max-w-7xl mx-auto text-center font-semibold sm:text-4xl text-3xl text-white leading-tight">Keunggulan Jurusan</h1>
+          <h1 class="sm:max-w-7xl mx-auto text-center font-semibold sm:text-4xl text-3xl text-white leading-tight tracking-wide">Keunggulan Jurusan</h1>
           <div class="flex justify-center flex-wrap py-20 space-y-10">
             <div class="flex justify-center gap-10 flex-wrap gap-x-40">
               <div v-for="(card, index) in cards" :key="index" class="sm:max-w-lg flex max-sm:flex-col gap-5 items-start py-5">
@@ -40,7 +40,7 @@ export default {
         },
         {
           title: "Fasilitas Komputer",
-          description: "Menyediakan lab komputer yang dirancang mendukung pengalaman belajar sesuai dengan kebutuhan industri saat ini.",
+          description: "Menyediakan lab komputer yang mendukung pengalaman belajar sesuai dengan kebutuhan industri saat ini.",
           src: img_computer,
         },
         {
@@ -50,7 +50,7 @@ export default {
         },
         {
           title: "Kegiatan Ekstrakurikuler",
-          description: "Memiliki ekstrakurikuler Zone IT, yang berfokus pada pembuatan website, mulai dari desain hingga pemrograman.",
+          description: "Memiliki Ekstrakurikuler Zone IT, yang berfokus pada pembuatan website, mulai dari desain hingga pemrograman.",
           src: img_people,
         },
       ]
