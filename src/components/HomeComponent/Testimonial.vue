@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[#F8FAFC]">
+    <section class="bg-slate-50">
         <div class="max-w-[1280px] flex justify-between flex-wrap items-center max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
           <div class="max-w-md relative">
             <h1 class="max-w-sm font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">Cerita Pengalaman dari Alumni PPLG</h1>

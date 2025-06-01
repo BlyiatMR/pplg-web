@@ -26,7 +26,7 @@
       <div class="max-w-[1280px] mx-auto pt-5 max-xl:mx-5">
         <div class="hidden lg:flex text-white justify-between items-center flex">
           <div>
-            <img class="w-16" src="/src/assets/images/pplg-logo.png" alt="">
+            <img class="w-16" src="/src/assets/images/pplg.png" alt="">
           </div>
           <div class="flex items-center gap-10 font-medium">
             <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
@@ -43,7 +43,7 @@
 
         <!-- Mobile Menu Icon -->
         <div class="lg:hidden flex justify-between">
-          <img class="w-16" src="/src/assets/images/pplg-logo.png" alt="">
+          <img class="w-16" src="/src/assets/images/pplg.png" alt="">
             <button class="text-white" @click="toggleMenu">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />

@@ -7,7 +7,7 @@
           <div class="w-[125rem] h-[85rem] border border-white rounded-full absolute -top-[10rem] -right-[30rem] opacity-10 -z-50"></div>
           <div class="flex flex-wrap max-sm:gap-10 justify-between">
             <div class="max-w-md max-sm:max-w-fit">
-              <img class="w-20" src="/src/assets/images/pplg-logo.png" alt="">
+              <img class="w-20" src="/src/assets/images/pplg.png" alt="">
               <p class="max-w-xs text-base text-white mt-5">Jurusan PPLG SMK Negeri 1 Pangkep berkomitmen mencetak generasi muda yang kompeten di bidang teknologi.</p>
               <div class="flex gap-5 mt-3">
                 <a href="https://www.instagram.com/pplgsmkn1pangkep/"><i class="fa-brands fa-instagram text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>

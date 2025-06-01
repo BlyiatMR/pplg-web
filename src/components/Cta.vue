@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[#F8FAFC] pb-20">
+    <section class="bg-slate-50 pb-20">
         <div class="max-w-[1280px] relative overflow-hidden mx-auto max-xl:mx-5 sm:pt-32 pt-0">
           <div class="w-[40rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
           <div class="w-[50rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
