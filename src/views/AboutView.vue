@@ -129,32 +129,32 @@ export default {
     return {
       profiles: [
         {
-          img: "./src/assets/images/teacher/pak_idris.jpeg",
+          img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
           name: "Idris Suyupi",
           position: "Ketua Jurusan & Guru Produktif",
         },
         {
-          img: "./src/assets/images/teacher/bu_sartika.jpeg",
+          img: new URL('@/assets/images/teacher/bu_sartika.jpeg', import.meta.url).href,
           name: "Sartika",
           position: "Guru Produktif",
         },
         {
-          img: "./src/assets/images/teacher/bu_aisyah.jpeg",
+          img: new URL('@/assets/images/teacher/bu_aisyah.jpeg', import.meta.url).href,
           name: "Nur Aisyah Abdullah",
           position: "Guru Produktif",
         },
         {
-          img: "./src/assets/images/teacher/bu_sul.jpeg",
+          img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
           name: "Sulfitriani",
           position: "Wali Kelas XI PPLG",
         },
         {
-          img: "./src/assets/images/teacher/bu_ermi.jpeg",
+          img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
           name: "Ermiwati Sahwa",
           position: "Wali Kelas XII PPLG",
         },
         {
-          img: "./src/assets/images/teacher/bu_indah.jpeg",
+          img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
           name: "Indah Purnama Syahir",
           position: "Guru Produktif & Wali Kelas X PPLG",
         },
