@@ -1,66 +1,127 @@
 <script>
-    export default {
-    data() {
-        return {
-        isMenuOpen: false,
-        isDarkMode: true
-        };
-    },
-    methods: {
-        toggleMenu() {
-        this.isMenuOpen = !this.isMenuOpen;
-        },
-        toggleDarkMode() {
-          this.isDarkMode = !this.isDarkMode;
-          if (this.isDarkMode) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
-        }
-    }
+import { gsap } from "gsap";
+
+export default {
+  data() {
+    return {
+      isMenuOpen: false,
+      isDarkMode: true
     };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      const menu = this.$refs.mobileMenu;
+      const overlay = this.$refs.menuOverlay;
+
+      if (this.isMenuOpen) {
+        document.body.classList.add('overflow-hidden'); // ⛔ disable scroll
+        gsap.set(overlay, { display: "block", opacity: 0 });
+        gsap.to(overlay, { opacity: 1, duration: 0.3 });
+
+        gsap.set(menu, { display: "block" });
+        gsap.fromTo(
+          menu,
+          { x: "100%", opacity: 0 },
+          { x: "0%", opacity: 1, duration: 0.5, ease: "power2.out" }
+        );
+      } else {
+        gsap.to(menu, {
+          x: "100%",
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.in",
+          onComplete: () => {
+            menu.style.display = "none";
+          }
+        });
+
+        gsap.to(overlay, {
+          opacity: 0,
+          duration: 0.3,
+          onComplete: () => {
+            overlay.style.display = "none";
+            document.body.classList.remove('overflow-hidden'); // ✅ enable scroll
+          }
+        });
+      }
+    },
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
+      document.documentElement.classList.toggle("dark", this.isDarkMode);
+    }
+  }
+};
 </script>
+
 <template>
-    <nav class="border-b border-white border-opacity-10 pb-5">
-      <div class="max-w-[1280px] mx-auto pt-5 max-xl:mx-5">
-        <div class="hidden lg:flex text-white justify-between items-center flex">
-          <div>
-            <img class="w-16" src="/src/assets/images/pplg.png" alt="">
-          </div>
-          <div class="flex items-center gap-10 font-medium">
-            <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
-            <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
-            <a href="/alumni" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Alumni</a>
-            <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Ekstrakurikuler</a>
-            <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
-            <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
-          </div>
-          <div>
-            <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold"><svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/></svg> Aktivitas</a>
-          </div>
-        </div>
-
-        <!-- Mobile Menu Icon -->
-        <div class="lg:hidden flex justify-between">
+  <nav class="border-b border-white border-opacity-10 pb-5">
+    <div class="max-w-[1280px] mx-auto pt-5 max-xl:mx-5">
+      <!-- Desktop -->
+      <div class="hidden lg:flex text-white justify-between items-center">
+        <div>
           <img class="w-16" src="/src/assets/images/pplg.png" alt="">
-            <button class="text-white" @click="toggleMenu">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
         </div>
-
-        <div v-if="isMenuOpen" class="lg:hidden bg-white bg-opacity-80 backdrop-blur-md shadow-2xl shadow-slate-950 border-t border-gray-700">
-          <div class="flex flex-col items-center gap-4 py-5 text-gray-400">
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Beranda</a>
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Profil Jurusan</a>
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Alumni</a>
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Kerja Sama</a>
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Galeri</a>
-            <a href="#" class="font-semibold tracking-wide hover:text-gray-300 duration-300">Kontak</a>
-          </div>
+        <div class="flex items-center gap-10 font-medium">
+          <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
+          <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
+          <a href="/alumni" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Alumni</a>
+          <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Ekstrakurikuler</a>
+          <a href="/gallery" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
+          <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
+        </div>
+        <div>
+          <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
+            <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
+            </svg>
+            Aktivitas
+          </a>
         </div>
       </div>
-    </nav>
+
+      <!-- Mobile -->
+      <div class="lg:hidden flex justify-between items-center">
+        <img class="w-16" src="/src/assets/images/pplg.png" alt="">
+        <button class="text-white" @click="toggleMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Overlay -->
+      <div ref="menuOverlay" class="fixed inset-0 z-40 bg-black bg-opacity-40 backdrop-blur-sm hidden lg:hidden" @click="toggleMenu"></div>
+
+      <!-- Mobile Menu -->
+      <div
+        ref="mobileMenu"
+        class="fixed top-0 right-0 h-full w-3/4 max-w-xs z-50 rounded-bl-[25em] bg-[#7743DB] bg-opacity-90 backdrop-blur-lg text-white shadow-xl lg:hidden"
+        style="display: none;">
+        <div class="flex justify-end px-7 pb-4 pt-10">
+          <button @click="toggleMenu" aria-label="Close Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col items-start gap-4 px-8">
+          <a href="/" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Beranda</a>
+          <a href="/about" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Profil</a>
+          <a href="/alumni" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Alumni</a>
+          <a href="#" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Ekstrakurikuler</a>
+          <a href="/gallery" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Galeri</a>
+          <a href="#" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Kontak</a>
+          <div>
+          <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
+            <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
+            </svg>
+            Aktivitas
+          </a>
+        </div>
+        </nav>
+      </div>
+    </div>
+  </nav>
 </template>
