@@ -4,6 +4,7 @@ import HeroSection from '@/components/HomeComponent/HeroSection.vue'
 import AboutSection from '@/components/HomeComponent/AboutSection.vue'
 import WhyChoose from '@/components/HomeComponent/WhyChoose.vue';
 import Testimonial from '@/components/HomeComponent/Testimonial.vue';
+import Faq from '@/components/Faq.vue';
 import Cta from '@/components/Cta.vue';
 import Footer from '@/components/Footer.vue';
 
@@ -69,6 +70,8 @@ export default {
       <WhyChoose />
 
       <Testimonial />
+
+      <Faq />
 
       <Cta />
 

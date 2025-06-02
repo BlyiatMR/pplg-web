@@ -77,7 +77,7 @@ import Footer from '@/components/Footer.vue';
       <section class="bg-slate-50 py-20">
         <div class="max-w-[1280px] mx-auto max-xl:mx-5">
           <div class="relative">
-            <h1 class="text-center font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">Guru-Guru Inspiratif PPLG</h1>
+            <h1 class="text-center font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">Guru-Guru Produktif PPLG</h1>
           </div>
           <div class="flex flex-wrap gap-10 mt-20 justify-center">
             <div 

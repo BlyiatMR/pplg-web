@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const typingText = ref(null)
+const cardRefs = ref([])
 
 onMounted(() => {
   const message = '. . .Tempat Para Developer Muda Berkembang dan Berkarya. . .'
@@ -25,7 +26,7 @@ onMounted(() => {
   gsap.to(spans, {
     opacity: 1,
     duration: 0.05,
-    stagger: 0.05,
+    stagger: 0.03,
     ease: 'power2.out',
     scrollTrigger: {
       trigger: typingText.value,
@@ -33,6 +34,21 @@ onMounted(() => {
       toggleActions: 'play none none none',
     }
   })
+
+  cardRefs.value.forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      duration: 0.5,
+      delay: i * 0.15,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    })
+  })
+
 })
 </script>
 
@@ -48,7 +64,11 @@ onMounted(() => {
             </div>
           </div>
           <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28">
-            <div v-for="(item, index) in items" :key="index" class="relative overflow-hidden group hover:bg-[#7743DB] hover:-translate-y-2 duration-300 py-5 px-6 rounded-3xl">
+            <div 
+              v-for="(item, index) in items"
+              :key="index"
+              :ref="el => cardRefs[index] = el" 
+              class="relative overflow-hidden group hover:bg-[#7743DB] hover:-translate-y-2 duration-300 py-5 px-6 rounded-3xl">
               <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
               <div class="mt-5 cursor-default">
                 <h1 class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">{{ item.title }}</h1>

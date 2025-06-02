@@ -3,7 +3,7 @@
         <div class="max-w-[1280px] relative overflow-hidden mx-auto max-xl:mx-5 sm:pt-32 pt-0">
           <div class="w-[40rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
           <div class="w-[50rem] h-[40rem] bg-white absolute -right-80 top-5 rounded-full opacity-10 max-sm:hidden"></div>
-          <img class="absolute right-10 top-0 w-[20rem] max-sm:hidden" src="/src/assets/images/boy-second.png" alt="">
+          <img class="absolute -right-11 -top-64 w-[40rem] max-sm:hidden" src="/src/assets/images/model.png" alt="">
           <div class="sm:py-20 sm:px-16 py-16 px-10 bg-[#7743DB] rounded-3xl">
             <h1 class="max-w-xl font-semibold sm:text-4xl text-3xl text-white tracking-wide leading-tight">Siap Menjadi Bagian dari Generasi Ahli Teknologi?</h1>
             <p class="max-w-xl text-base text-white mt-5">Bergabunglah bersama kami dan wujudkan impianmu menjadi ahli pemrograman, pengembang perangkat lunak, dan pencipta gim inovatif</p>
