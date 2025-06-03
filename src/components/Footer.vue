@@ -55,7 +55,7 @@
           </div>
           <hr class="w-full opacity-20 mt-5">
           <div>
-            <p class="text-base text-center text-white mt-5">© 2024 Jurusan PPLG SMKN 1 Pangkep. Seluruh Hak Cipta Dilindungi.</p>
+            <p class="text-base text-center text-white mt-5">© 2025 Jurusan PPLG SMKN 1 Pangkep. Seluruh Hak Cipta Dilindungi.</p>
           </div>
         </div>
       </footer>

@@ -145,7 +145,7 @@ export default {
           </svg>
         </button>
       </div>
-      <nav class="flex flex-col items-start gap-4 px-8">
+      <nav class="flex flex-col items-start gap-4 px-5">
         <a href="/" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Beranda</a>
         <a href="/about" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Profil</a>
         <a href="/alumni" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Alumni</a>
@@ -162,11 +162,11 @@ export default {
         </div>
         <footer class="mt-16">
           <div>
-            <p class="text-base text-white"><i class="fa-solid fa-envelope pr-3 text-white"></i>pplgsmknpangkep@gmail.com</p>
+            <p class="text-xs text-white">pplgsmknpangkep@gmail.com</p>
             <div class="flex gap-5 mt-3">
               <a href="https://www.instagram.com/pplgsmkn1pangkep/"><i class="fa-brands fa-instagram text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>
-              <a href="https://www.instagram.com/pplgsmkn1pangkep/"><i class="fa-brands fa-facebook text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>
-              <a href="https://www.instagram.com/pplgsmkn1pangkep/"><i class="fa-brands fa-youtube text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>
+              <a href="https://web.facebook.com/smkn1pangkep"><i class="fa-brands fa-facebook text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>
+              <a href="https://www.youtube.com/@pplg_smkn1pangkep/videos"><i class="fa-brands fa-youtube text-2xl text-white opacity-70 hover:opacity-100 duration-300"></i></a>
             </div>
           </div>
         </footer>
