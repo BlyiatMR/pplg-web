@@ -1,6 +1,6 @@
 <template>
   <section class="bg-slate-50">
-    <div class="max-w-[1280px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
+    <div class="max-w-[1100px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
       <h1 class="font-semibold text-center sm:text-4xl text-3xl text-slate-800 tracking-wide">
         Pertanyaan yang Sering Diajukan
       </h1>
@@ -9,10 +9,10 @@
           class="space-y-5"
           v-for="(faq, i) in faqs"
           :key="i">
-          <div class="max-w-xl bg-white rounded-3xl mx-auto shadow-2xl px-10 py-5">
+          <div class="max-w-lg bg-white rounded-3xl mx-auto shadow-2xl px-10 py-5">
             <h3
               @click="toggleFaq(i)"
-              class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+              class="font-semibold text-slate-800 text-lg cursor-pointer flex justify-between items-center tracking-wide">
               {{ faq.question }}
               <span
                 :class="openIndex === i ? 'rotate-180' : ''"
@@ -35,7 +35,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 
 const faqs = ref([
   {
@@ -70,19 +70,29 @@ const faqs = ref([
   },
 ])
 
-// State
-const openIndex = ref(0)
+const openIndex = ref(null)
 const answerRefs = []
 const contentHeights = ref([])
 
-onMounted(async () => {
+const calculateHeights = async () => {
   await nextTick()
-  contentHeights.value = answerRefs.map((el) => {
-    return el.scrollHeight || 0
-  })
-})
+  contentHeights.value = answerRefs.map((el) => el?.scrollHeight || 0)
+}
 
-const toggleFaq = (index) => {
+const toggleFaq = async (index) => {
   openIndex.value = openIndex.value === index ? null : index
 }
+
+onMounted(() => {
+  calculateHeights()
+  window.addEventListener('resize', calculateHeights)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', calculateHeights)
+})
+
+watch(openIndex, async () => {
+  await calculateHeights()
+})
 </script>

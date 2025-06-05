@@ -1,6 +1,6 @@
 <template>
     <footer class="">
-        <div class="max-w-[1280px] relative mx-auto max-xl:mx-5 pt-20 pb-5">
+        <div class="max-w-[1100px] relative mx-auto max-xl:mx-5 pt-20 pb-5">
           <div class="w-[65rem] h-[65rem] border border-white rounded-full absolute -right-[30rem] opacity-10 -z-50"></div>
           <div class="w-[85rem] h-[75rem] border border-white rounded-full absolute -top-[5rem] -right-[30rem] opacity-10 -z-50"></div>
           <div class="w-[105rem] h-[85rem] border border-white rounded-full absolute -top-[10rem] -right-[30rem] opacity-10 -z-50"></div>

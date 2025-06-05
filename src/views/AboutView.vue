@@ -19,8 +19,8 @@ import Footer from '@/components/Footer.vue';
       <Navbar />
 
       <section class="z-50">
-        <div class="max-w-[1280px] mx-auto max-xl:mx-5">
-          <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-24 pb-20 pt-40">
+        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
+          <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
             <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">Profil Jurusan</h1>
             <div class="mx-auto text-center">
               <a class="text-base font-medium text-white text-center">Beranda > Profil</a>
@@ -30,16 +30,16 @@ import Footer from '@/components/Footer.vue';
       </section>
 
       <section class="bg-slate-50 py-20 space-y-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1280px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-between items-center max-w-[1100px] mx-auto max-xl:mx-5">
          <div class="max-w-xl space-y-5">
           <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">Mengenal Jurusan PPLG</h1>
           <p class="text-base font-medium text-slate-600">Salah satu program keahlian SMK Negeri 1 Pangkajene dan Kepulauan di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game). <br><br> Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern. <br><br>Melalui kurikulum yang terus diperbarui sesuai dengan perkembangan teknologi, jurusan ini menjadi pilihan yang tepat bagi siswa yang ingin menjadi bagian dari ekosistem digital yang dinamis dan inovatif.</p>
          </div>
          <div class="max-sm:mt-10">
-          <img src="/src/assets/images/pplg.png" class="w-[500px]" alt="">
+          <img src="/src/assets/images/pplg.png" class="w-[400px]" alt="">
          </div>
         </div>
-        <div class="max-w-[1280px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
           <div class="max-w-full bg-[#7743DB] flex flex-wrap sm:justify-around justify-center max-sm:gap-10 rounded-3xl px-10 py-10 shadow-2xl">
             <div class="flex flex-col items-center gap-3">
               <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">250+</p>
@@ -54,9 +54,9 @@ import Footer from '@/components/Footer.vue';
       </section>
 
       <section class="bg-white py-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1280px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-between items-center max-w-[1100px] mx-auto max-xl:mx-5">
           <div>
-            <img src="/src/assets/images/class.jpg" class="object-cover object-top rounded-3xl w-[37rem] h-[38rem]" alt="">
+            <img src="/src/assets/images/pict-1.png" class="object-cover object-top rounded-3xl w-[30rem] h-[25rem]" alt="">
           </div>
           <div class="max-w-xl">
             <div class="space-y-5 max-sm:mt-10">
@@ -75,7 +75,7 @@ import Footer from '@/components/Footer.vue';
       </section>
 
       <section class="bg-slate-50 py-20">
-        <div class="max-w-[1280px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
           <div class="relative">
             <h1 class="text-center font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">Guru-Guru Produktif PPLG</h1>
           </div>

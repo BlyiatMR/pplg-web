@@ -39,7 +39,7 @@ onMounted(() => {
     gsap.from(card, {
       opacity: 0,
       duration: 0.5,
-      delay: i * 0.15,
+      delay: i * 0.10,
       ease: "power1.out",
       scrollTrigger: {
         trigger: card,
@@ -54,7 +54,7 @@ onMounted(() => {
 
 <template>
     <section class="bg-slate-50 py-20 space-y-20">
-        <div class="max-w-[1280px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
           <div id="about" class="">
             <div class="sm:space-y-16 space-y-6 ">
               <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-3xl text-slate-800 tracking-wide"></h1>
@@ -63,12 +63,12 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28">
+          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28 group">
             <div 
               v-for="(item, index) in items"
               :key="index"
               :ref="el => cardRefs[index] = el" 
-              class="relative overflow-hidden group hover:bg-[#7743DB] hover:-translate-y-2 duration-300 py-5 px-6 rounded-3xl">
+              class="w-[335px] group-hover:bg-[#7743DB] group-hover:-translate-y-2 duration-300 py-5 sm:px-10 px-6 rounded-3xl group-hover:shadow-lg">
               <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
               <div class="mt-5 cursor-default">
                 <h1 class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">{{ item.title }}</h1>

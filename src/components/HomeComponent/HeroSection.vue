@@ -1,6 +1,6 @@
 <template>
-    <section class="max-w-[1280px] mx-auto max-xl:mx-5 flex flex-wrap sm:justify-between justify-start z-50 h-[42rem] mt-28">
-        <div class="sm:max-w-2xl w-fit space-y-5 sm:pt-24 pt-10">
+    <section class="max-w-[1100px] mx-auto max-xl:mx-5 flex flex-wrap sm:justify-between justify-start z-50 h-[42rem] mt-28">
+        <div class="sm:max-w-lg w-fit space-y-5 sm:pt-24 pt-10">
           <h1 id="title" class="sm:text-6xl text-3xl text-white font-semibold tracking-wide leading-tight">Pengembangan Perangkat Lunak dan Gim</h1>
           <h3 id="description" class="text-base text-white tracking-wide">Jurusan IT Kekinian Menjadi Ahli Teknologi Masa Depan Pembelajaran yang berfokus pada tren teknologi terkini dan praktik industri</h3>
           <div class="flex pt-10 gap-10">
@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="flex">
-          <img id="imgs" class="w-[38rem] -z-50" src="/src/assets/images/actr.png" alt="">
+          <img id="imgs" class="w-[33rem] object-cover -z-50" src="/src/assets/images/actr.png" alt="">
         </div>
         <!-- <div class="flex pt-20">
           <div class="max-w-fit p-5 bg-[#9167E2] rounded-xl h-fit">

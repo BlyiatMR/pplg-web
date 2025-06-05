@@ -92,19 +92,19 @@ export default {
   <div>
     <!-- Navbar -->
     <nav ref="navbar" class="fixed top-0 left-0 w-full z-[999] bg-transparent transition-all duration-300 border-b border-white border-opacity-10 pb-5">
-      <div class="max-w-[1280px] mx-auto pt-5 max-xl:mx-5">
+      <div class="max-w-[1100px] mx-auto pt-5 max-xl:mx-5">
         <!-- Desktop -->
         <div class="hidden lg:flex text-white justify-between items-center">
           <div>
-            <img class="w-16" src="/src/assets/images/pplg.png" alt="">
+            <img class="w-14" src="/src/assets/images/pplg.png" alt="">
           </div>
-          <div class="flex items-center gap-10 font-medium">
+          <div class="flex items-center gap-8 font-medium">
             <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
             <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
             <a href="/alumni" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Alumni</a>
             <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Ekstrakurikuler</a>
             <a href="/gallery" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
-            <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
+            <a href="/contact" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
           </div>
           <div>
             <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
@@ -118,7 +118,9 @@ export default {
 
         <!-- Mobile -->
         <div class="lg:hidden flex justify-between items-center">
-          <img class="w-16" src="/src/assets/images/pplg.png" alt="">
+          <a href="/">
+            <img class="w-12" src="/src/assets/images/pplg.png" alt="">
+          </a>
           <button class="text-white" @click="toggleMenu">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -151,7 +153,7 @@ export default {
         <a href="/alumni" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Alumni</a>
         <a href="#" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Ekstrakurikuler</a>
         <a href="/gallery" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Galeri</a>
-        <a href="#" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Kontak</a>
+        <a href="/contact" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Kontak</a>
         <div class="mt-5">
           <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
             <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
