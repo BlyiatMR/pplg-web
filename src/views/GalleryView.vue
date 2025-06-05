@@ -1,7 +1,6 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Cta from '@/components/Cta.vue';
-import Faq from '@/components/Faq.vue';
 import Footer from '@/components/Footer.vue';
 
 </script>
@@ -35,8 +34,6 @@ import Footer from '@/components/Footer.vue';
             
         </div>
       </section>
-
-      <Faq />
 
       <Cta />
 

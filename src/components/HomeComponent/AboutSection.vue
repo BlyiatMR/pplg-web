@@ -63,16 +63,16 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28 group">
+          <div class="relative max-w-7xl mx-auto flex gap-5 flex-wrap justify-around mt-28">
             <div 
               v-for="(item, index) in items"
               :key="index"
               :ref="el => cardRefs[index] = el" 
-              class="w-[335px] group-hover:bg-[#7743DB] group-hover:-translate-y-2 duration-300 py-5 sm:px-10 px-6 rounded-3xl group-hover:shadow-lg">
+              class="w-[335px] border border-slate-200 shadow-xl py-5 sm:px-10 px-6 rounded-3xl">
               <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
               <div class="mt-5 cursor-default">
-                <h1 class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">{{ item.title }}</h1>
-                <p class="sm:w-72 w-fit mt-2 text-base text-slate-600 group-hover:text-white duration-300">{{ item.description }}</p>
+                <h1 class="text-lg text-slate-800 font-semibold">{{ item.title }}</h1>
+                <p class="sm:w-72 w-fit mt-2 text-base text-slate-600">{{ item.description }}</p>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default {
           title: "Web Development",
           description: "Membuat website interaktif dengan teknologi modern.",
           viewBox: "0 0 24 24",
-          icon: `<g fill="none" class="stroke-slate-800 group-hover:stroke-white duration-300" 
+          icon: `<g fill="none" class="stroke-slate-800 duration-300" 
                   stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor">
                   <path d="M20 14.5v-8c0-1.886 0-2.828-.586-3.414S17.886 2.5 16 2.5H8c-1.886 0-2.828 0-3.414.586S4 4.614 4 6.5v8m-.502 1.015L4.02 14.5h15.932l.55 1.015c1.443 2.662 1.803 3.993 1.254 4.989s-2.002.996-4.91.996H7.154c-2.909 0-4.363 0-4.911-.996c-.549-.996-.19-2.327 1.254-4.989"/>
                   <path d="m15.5 7l.92.793c.387.333.58.5.58.707s-.193.374-.58.707L15.5 10m-7-3l-.92.793c-.387.333-.58.5-.58.707s.193.374.58.707L8.5 10M13 6l-2 5"/>
@@ -99,13 +99,13 @@ export default {
           title: "Game Development",
           description: "Membuat game interaktif dengan tools dan kreativitas.",
           viewBox: "0 0 24 24",
-          icon: `<path fill="none" class="stroke-slate-800 group-hover:stroke-white duration-300" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 14.5c0-3.287 0-4.931.908-6.038a4 4 0 0 1 .554-.554C4.57 7 6.212 7 9.5 7h5c3.288 0 4.931 0 6.038.908a4 4 0 0 1 .554.554C22 9.57 22 11.212 22 14.5s0 4.931-.908 6.038a4 4 0 0 1-.554.554C19.43 22 17.788 22 14.5 22h-5c-3.287 0-4.931 0-6.038-.908a4 4 0 0 1-.554-.554C2 19.43 2 17.788 2 14.5M12 7V5a1 1 0 0 1 1-1a1 1 0 0 0 1-1V2m-4 14l-1.5-1.5m0 0L7 13m1.5 1.5L7 16m1.5-1.5L10 13m7 2.5v-2" color="currentColor"/>`
+          icon: `<path fill="none" class="stroke-slate-800 duration-300" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 14.5c0-3.287 0-4.931.908-6.038a4 4 0 0 1 .554-.554C4.57 7 6.212 7 9.5 7h5c3.288 0 4.931 0 6.038.908a4 4 0 0 1 .554.554C22 9.57 22 11.212 22 14.5s0 4.931-.908 6.038a4 4 0 0 1-.554.554C19.43 22 17.788 22 14.5 22h-5c-3.287 0-4.931 0-6.038-.908a4 4 0 0 1-.554-.554C2 19.43 2 17.788 2 14.5M12 7V5a1 1 0 0 1 1-1a1 1 0 0 0 1-1V2m-4 14l-1.5-1.5m0 0L7 13m1.5 1.5L7 16m1.5-1.5L10 13m7 2.5v-2" color="currentColor"/>`
         },
         {
           title: "Mobile Development",
           description: "Membangun aplikasi Android sesuai standar industri.",
           viewBox: "0 0 24 24",
-          icon: `<path fill="none" class="stroke-slate-800 group-hover:stroke-white duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8c.01-2.644.108-4.059 1.024-4.975C7.049 2 8.699 2 11.999 2s4.95 0 5.975 1.025c.916.916 1.013 2.33 1.023 4.975M5 16c.01 2.644.108 4.059 1.024 4.975C7.049 22 8.699 22 11.999 22s4.95 0 5.975-1.025c.916-.916 1.013-2.33 1.023-4.975M11 19h2m3-9l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L16 14m-8-4l-1.227 1.057C6.258 11.502 6 11.724 6 12s.258.498.773.943L8 14m5-5l-2 6" color="currentColor"/>`
+          icon: `<path fill="none" class="stroke-slate-800 duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8c.01-2.644.108-4.059 1.024-4.975C7.049 2 8.699 2 11.999 2s4.95 0 5.975 1.025c.916.916 1.013 2.33 1.023 4.975M5 16c.01 2.644.108 4.059 1.024 4.975C7.049 22 8.699 22 11.999 22s4.95 0 5.975-1.025c.916-.916 1.013-2.33 1.023-4.975M11 19h2m3-9l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L16 14m-8-4l-1.227 1.057C6.258 11.502 6 11.724 6 12s.258.498.773.943L8 14m5-5l-2 6" color="currentColor"/>`
         },
         {
           title: "UI/UX Design",
@@ -129,7 +129,7 @@ export default {
           title: "Basis Data",
           description: "Penyimpanan data terorganisir untuk kemudahan akses.",
           viewBox: "0 0 24 24",
-          icon: `<g class="stroke-slate-800 group-hover:stroke-white duration-300" fill="none" stroke-width="1.5"><path stroke-linecap="round" d="M4 18V6m16 0v12"/><path d="M12 10c4.418 0 8-1.79 8-4s-3.582-4-8-4s-8 1.79-8 4s3.582 4 8 4Zm8 2c0 2.21-3.582 4-8 4s-8-1.79-8-4m16 6c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></g>`
+          icon: `<g class="stroke-slate-800 duration-300" fill="none" stroke-width="1.5"><path stroke-linecap="round" d="M4 18V6m16 0v12"/><path d="M12 10c4.418 0 8-1.79 8-4s-3.582-4-8-4s-8 1.79-8 4s3.582 4 8 4Zm8 2c0 2.21-3.582 4-8 4s-8-1.79-8-4m16 6c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></g>`
         },
       ]
     };

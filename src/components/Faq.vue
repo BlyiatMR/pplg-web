@@ -9,10 +9,10 @@
           class="space-y-5"
           v-for="(faq, i) in faqs"
           :key="i">
-          <div class="max-w-lg bg-white rounded-3xl mx-auto shadow-2xl px-10 py-5">
+          <div class="max-w-lg bg-white rounded-xl mx-auto shadow-xl sm:px-10 px-6 py-5">
             <h3
               @click="toggleFaq(i)"
-              class="font-semibold text-slate-800 text-lg cursor-pointer flex justify-between items-center tracking-wide">
+              class="font-semibold text-slate-800 sm:text-lg text-base cursor-pointer flex justify-between items-center tracking-wide">
               {{ faq.question }}
               <span
                 :class="openIndex === i ? 'rotate-180' : ''"

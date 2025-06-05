@@ -40,7 +40,7 @@ import Footer from '@/components/Footer.vue';
          </div>
         </div>
         <div class="max-w-[1100px] mx-auto max-xl:mx-5">
-          <div class="max-w-full bg-[#7743DB] flex flex-wrap sm:justify-around justify-center max-sm:gap-10 rounded-3xl px-10 py-10 shadow-2xl">
+          <div class="max-w-full bg-[#7743DB] flex flex-wrap sm:justify-around justify-center max-sm:gap-10 rounded-3xl px-10 py-10 shadow-xl">
             <div class="flex flex-col items-center gap-3">
               <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">250+</p>
               <p class="text-white font-medium tracking-wide">Total Siswa</p>
@@ -56,7 +56,7 @@ import Footer from '@/components/Footer.vue';
       <section class="bg-white py-20">
         <div class="flex flex-wrap justify-between items-center max-w-[1100px] mx-auto max-xl:mx-5">
           <div>
-            <img src="/src/assets/images/pict-1.png" class="object-cover object-top rounded-3xl w-[30rem] h-[25rem]" alt="">
+            <img src="/src/assets/images/class.jpg" class="object-cover object-top rounded-3xl w-[30rem] h-[25rem]" alt="">
           </div>
           <div class="max-w-xl">
             <div class="space-y-5 max-sm:mt-10">
@@ -83,7 +83,7 @@ import Footer from '@/components/Footer.vue';
             <div 
               v-for="(profile, index) in profiles" 
               :key="index" 
-              class="relative bg-white rounded-3xl shadow-2xl"
+              class="relative bg-white rounded-3xl shadow-xl"
             >
               <img :src="profile.img" class="rounded-t-3xl w-80 h-96 object-cover" alt=""/>
               <div class="justify-between items-end py-3 px-5">
@@ -144,6 +144,11 @@ export default {
           position: "Guru Produktif",
         },
         {
+          img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
+          name: "Indah Purnama Syahir",
+          position: "Guru Produktif & Wali Kelas X PPLG",
+        },
+        {
           img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
           name: "Sulfitriani",
           position: "Wali Kelas XI PPLG",
@@ -152,11 +157,6 @@ export default {
           img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
           name: "Ermiwati Sahwa",
           position: "Wali Kelas XII PPLG",
-        },
-        {
-          img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
-          name: "Indah Purnama Syahir",
-          position: "Guru Produktif & Wali Kelas X PPLG",
         },
       ]
     };
