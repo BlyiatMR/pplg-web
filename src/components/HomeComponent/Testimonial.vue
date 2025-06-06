@@ -1,70 +1,18 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
-import { gsap } from 'gsap'
-
 const testimonials = [
   {
+    img: "/src/assets/images/alumni.jpg",
     name: "Emil Kusmayadi",
     year: "Alumni Tahun 2024",
-    img: "/src/assets/images/alumni.jpg",
-    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!",
+    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
   },
   {
+    img: "/src/assets/images/hafizh.jpg",
     name: "Muhammad Hafizh",
     year: "Alumni Tahun 2025",
-    img: "/src/assets/images/hafizh.jpg",
-    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!",
-  },
-  {
-    name: "Rizky Ramadhan",
-    year: "Alumni Tahun 2023",
-    img: "/src/assets/images/rizky.jpg",
-    text: "Pengalaman di PPLG sangat berharga dan membentuk karir saya di bidang IT.",
-  },
-  {
-    name: "Siti Nurhaliza",
-    year: "Alumni Tahun 2022",
-    img: "/src/assets/images/siti.jpg",
-    text: "PPLG memberikan saya banyak ilmu dan relasi di dunia teknologi.",
-  },
-]
-
-const current = ref(0)
-const cardRefs = ref([])
-
-const visibleTestimonials = computed(() => {
-  // Ambil 2 card, looping jika sudah di akhir array
-  const arr = []
-  for (let i = 0; i < 2; i++) {
-    arr.push(testimonials[(current.value + i) % testimonials.length])
+    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
   }
-  return arr
-})
-
-function animateCards() {
-  nextTick(() => {
-    cardRefs.value.forEach((el, i) => {
-      if (!el) return
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
-      )
-    })
-  })
-}
-
-let intervalId = null
-onMounted(() => {
-  animateCards()
-  intervalId = setInterval(() => {
-    current.value = (current.value + 1) % testimonials.length
-    animateCards()
-  }, 3500)
-})
-onUnmounted(() => {
-  clearInterval(intervalId)
-})
+]
 </script>
 
 <template>
@@ -78,23 +26,20 @@ onUnmounted(() => {
           Alumni kami telah membuktikan bahwa dengan semangat belajar dan ilmu yang bermanfaat.
         </p>
       </div>
-      <div class="flex gap-10 flex-wrap">
+      <div class="flex flex-wrap gap-10">
         <div
-          v-for="(item, idx) in visibleTestimonials"
+          v-for="item in testimonials"
           :key="item.name"
-          ref="cardRefs"
-          class="sm:max-w-xs max-w-full space-y-5 border border-slate-200 shadow-xl rounded-3xl py-10 px-7 bg-white transition-all duration-300"
+          class="sm:max-w-xs max-w-full space-y-5 border border-slate-200 shadow-xl rounded-3xl py-10 px-7"
         >
           <div class="rounded-full bg-[#7743DB] w-fit px-4 py-4">
             <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path fill="#fff" d="M6.848 2.47a1 1 0 0 1-.318 1.378A7.3 7.3 0 0 0 3.75 7.01A3 3 0 1 1 1 10v-.027a4 4 0 0 1 .01-.232c.009-.15.027-.36.062-.618c.07-.513.207-1.22.484-2.014c.552-1.59 1.67-3.555 3.914-4.957a1 1 0 0 1 1.378.318m7 0a1 1 0 0 1-.318 1.378a7.3 7.3 0 0 0-2.78 3.162A3 3 0 1 1 8 10v-.027a4 4 0 0 1 .01-.232c.009-.15.027-.36.062-.618c.07-.513.207-1.22.484-2.014c.552-1.59 1.67-3.555 3.914-4.957a1 1 0 0 1 1.378.318"/>
             </svg>
           </div>
-          <p class="text-base font-medium text-slate-600">
-            {{ item.text }}
-          </p>
+          <p class="text-base font-medium text-slate-600">{{ item.text }}</p>
           <div class="flex items-center gap-5 justify-center">
-            <img class="w-12 h-12 object-cover rounded-full" :src="item.img" :alt="item.name">
+            <img class="w-12 h-12 object-cover rounded-full" :src="item.img" :alt="item.name" />
             <div>
               <h1 class="text-lg font-semibold text-slate-800">{{ item.name }}</h1>
               <p>{{ item.year }}</p>

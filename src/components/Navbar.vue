@@ -19,13 +19,8 @@ export default {
         document.body.classList.add("overflow-hidden");
         gsap.set(overlay, { display: "block", opacity: 0 });
         gsap.to(overlay, { opacity: 1, duration: 0.3 });
-
         gsap.set(menu, { display: "block" });
-        gsap.fromTo(
-          menu,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.5, ease: "power1.out" }
-        );
+        gsap.fromTo(menu, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.out" });
       } else {
         gsap.to(menu, {
           opacity: 0,
@@ -36,7 +31,6 @@ export default {
             document.body.classList.remove("overflow-hidden");
           }
         });
-
         gsap.to(overlay, {
           opacity: 0,
           duration: 0.3,
@@ -48,7 +42,6 @@ export default {
     },
     handleScroll() {
       const navbar = this.$refs.navbar;
-
       if (!this.hasAnimatedNavbar && window.scrollY > 10) {
         this.hasAnimatedNavbar = true;
         gsap.fromTo(
@@ -58,7 +51,6 @@ export default {
         );
         navbar.classList.add("scrolled");
       }
-
       if (window.scrollY > 10) {
         navbar.classList.add("scrolled");
       } else {
@@ -68,7 +60,7 @@ export default {
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       document.documentElement.classList.toggle("dark", this.isDarkMode);
-    }
+    } 
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
@@ -95,9 +87,7 @@ export default {
       <div class="max-w-[1100px] mx-auto pt-5 max-xl:mx-5">
         <!-- Desktop -->
         <div class="hidden lg:flex text-white justify-between items-center">
-          <div>
-            <img class="w-14" src="/src/assets/images/pplg.png" alt="">
-          </div>
+          <img class="w-14" src="/src/assets/images/pplg.png" alt="">
           <div class="flex items-center gap-8 font-medium">
             <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
             <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
@@ -106,16 +96,13 @@ export default {
             <a href="/gallery" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
             <a href="/contact" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
           </div>
-          <div>
-            <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
-              <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
-              </svg>
-              Aktivitas
-            </a>
-          </div>
+          <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
+            <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
+            </svg>
+            Aktivitas
+          </a>
         </div>
-
         <!-- Mobile -->
         <div class="lg:hidden flex justify-between items-center">
           <a href="/">

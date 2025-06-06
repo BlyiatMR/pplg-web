@@ -1,39 +1,3 @@
-<template>
-  <section class="bg-slate-50">
-    <div class="max-w-[1100px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
-      <h1 class="font-semibold text-center sm:text-4xl text-3xl text-slate-800 tracking-wide">
-        Pertanyaan yang Sering Diajukan
-      </h1>
-      <div class="mt-10 flex flex-wrap justify-center gap-5">
-        <div
-          class="space-y-5"
-          v-for="(faq, i) in faqs"
-          :key="i">
-          <div class="max-w-lg bg-white rounded-xl mx-auto shadow-xl sm:px-10 px-6 py-5">
-            <h3
-              @click="toggleFaq(i)"
-              class="font-semibold text-slate-800 sm:text-lg text-base cursor-pointer flex justify-between items-center tracking-wide">
-              {{ faq.question }}
-              <span
-                :class="openIndex === i ? 'rotate-180' : ''"
-                class="transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5m0 0l-5 5"/></svg></span>
-            </h3>
-            <div
-              class="overflow-hidden transition-all duration-300"
-              :ref="el => answerRefs[i] = el"
-              :style="{ height: openIndex === i ? contentHeights[i] + 'px' : '0px' }">
-              <p class="text-base font-medium text-slate-600 mt-3">
-                {{ faq.answer }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 
@@ -96,3 +60,39 @@ watch(openIndex, async () => {
   await calculateHeights()
 })
 </script>
+
+<template>
+  <section class="bg-slate-50">
+    <div class="max-w-[1100px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
+      <h1 class="font-semibold text-center sm:text-4xl text-3xl text-slate-800 tracking-wide">
+        Pertanyaan yang Sering Diajukan
+      </h1>
+      <div class="mt-10 flex flex-wrap justify-center gap-5">
+        <div
+          class="space-y-5"
+          v-for="(faq, i) in faqs"
+          :key="i">
+          <div class="max-w-lg bg-white rounded-xl mx-auto shadow-xl sm:px-10 px-6 py-5">
+            <h3
+              @click="toggleFaq(i)"
+              class="font-semibold text-slate-800 sm:text-lg text-base cursor-pointer flex justify-between items-center tracking-wide">
+              {{ faq.question }}
+              <span
+                :class="openIndex === i ? 'rotate-180' : ''"
+                class="transition-transform">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5m0 0l-5 5"/></svg></span>
+            </h3>
+            <div
+              class="overflow-hidden transition-all duration-300"
+              :ref="el => answerRefs[i] = el"
+              :style="{ height: openIndex === i ? contentHeights[i] + 'px' : '0px' }">
+              <p class="text-base font-medium text-slate-600 mt-3">
+                {{ faq.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
