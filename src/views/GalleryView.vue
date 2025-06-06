@@ -16,22 +16,22 @@ const categories = [
 
 const images = [
   {
-    src: "/src/assets/images/gallery/gallery-1.jpeg",
+    src: new URL('@/assets/images/gallery/gallery-1.jpeg', import.meta.url).href,
     desc: "Kegiatan Praktikum Siswa PPLG di Lab Komputer.",
     category: "praktikum"
   },
   {
-    src: "/src/assets/images/gallery/gallery-2.jpeg",
+    src: new URL('@/assets/images/gallery/gallery-2.jpeg', import.meta.url).href,
     desc: "Perwakilan Jurusan PPLG Mengikuti Lomba Web Design di PNUP.",
     category: "lomba"
   },
   {
-    src: "/src/assets/images/gallery/gallery-3.jpeg",
+    src: new URL('@/assets/images/gallery/gallery-3.jpeg', import.meta.url).href,
     desc: "Kunjungan industri ke perusahaan teknologi.",
     category: "lomba"
   },
   {
-    src: "/src/assets/images/gallery/gallery-4.jpeg",
+    src: new URL('@/assets/images/gallery/gallery-4.jpeg', import.meta.url).href,
     desc: "Angkatan 55 Melakukan Kegiatan Kunjungan industri ke perusahaan teknologi.",
     category: "kunjungan"
   }
@@ -79,7 +79,7 @@ onUnmounted(() => {
         <div class="max-w-[1100px] mx-auto max-xl:mx-5">
           <div>
             <nav>
-              <ul class="flex flex-wrap sm:justify-center justify-start sm:gap-8 gap-y-5 gap-x-7">
+              <ul class="flex flex-wrap sm:justify-center justify-start sm:gap-8 gap-y-2 gap-x-7">
                 <li v-for="cat in categories" :key="cat.value">
                   <button
                     class="text-base font-semibold px-3 py-2 rounded-md transition-colors"
