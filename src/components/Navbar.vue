@@ -1,5 +1,7 @@
 <script>
 import { gsap } from "gsap";
+import Swal from "sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 export default {
   data() {
@@ -60,7 +62,28 @@ export default {
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       document.documentElement.classList.toggle("dark", this.isDarkMode);
-    } 
+    },
+    showAktivitasPopup() {
+      Swal.fire({
+        title: 'Aktivitas Jurusan',
+        html: `
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding: 0 0 24px 0;">
+            <svg width="90" height="90" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#facc15"/>
+              <path d="M8 12h8M12 8v8" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div style="margin-top:18px;font-size:1.1rem;color:#fff;">Video aktivitas akan hadir di sini.</div>
+          </div>
+        `,
+        width: 400,
+        background: '#222',
+        showCloseButton: true,
+        showConfirmButton: false,
+        customClass: {
+          popup: 'rounded-2xl shadow-lg'
+        }
+      });
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
@@ -96,12 +119,16 @@ export default {
             <a href="/gallery" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
             <a href="/contact" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
           </div>
-          <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
+          <button
+            @click="showAktivitasPopup"
+            class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold"
+            style="outline:none;border:none;cursor:pointer"
+          >
             <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
             </svg>
             Aktivitas
-          </a>
+          </button>
         </div>
         <!-- Mobile -->
         <div class="lg:hidden flex justify-between items-center">
@@ -142,12 +169,16 @@ export default {
         <a href="/gallery" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Galeri</a>
         <a href="/contact" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Kontak</a>
         <div class="mt-5">
-          <a href="#" class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold">
+          <button
+            @click="showAktivitasPopup"
+            class="w-fit flex items-center text-slate-800 gap-3 bg-yellow-400 py-1 px-4 rounded-lg tracking-wide font-semibold"
+            style="outline:none;border:none;cursor:pointer"
+          >
             <svg class="w-9 bg-yellow-400 p-2 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path class="fill-black" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/>
             </svg>
             Aktivitas
-          </a>
+          </button>
         </div>
         <footer class="mt-16">
           <div>
