@@ -79,7 +79,7 @@ onMounted(() => {
             </p>
           </div>
           <div class="max-sm:mt-10">
-            <img src="/src/assets/images/pplg.png" class="w-[400px]" alt="">
+            <img src="/src/assets/images/pplg-logo.png" class="w-[400px]" alt="">
           </div>
         </div>
         <div id="count-section" class="max-w-[1100px] mx-auto max-xl:mx-5">

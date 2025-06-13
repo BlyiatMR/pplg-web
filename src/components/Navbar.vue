@@ -110,7 +110,7 @@ export default {
       <div class="max-w-[1100px] mx-auto pt-5 max-xl:mx-5">
         <!-- Desktop -->
         <div class="hidden lg:flex text-white justify-between items-center">
-          <img class="w-14" src="/src/assets/images/pplg.png" alt="">
+          <img class="w-14" src="/src/assets/images/pplg-logo.png" alt="">
           <div class="flex items-center gap-8 font-medium">
             <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
             <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>

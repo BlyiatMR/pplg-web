@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const typingText = ref(null)
 const cardRefs = ref([])
+const btnRef = ref(null)
 
 onMounted(() => {
   // Typing animation
@@ -45,6 +46,21 @@ onMounted(() => {
       }
     })
   })
+
+  // Button "Lebih Detail" muncul dari bawah
+  if (btnRef.value) {
+    gsap.from(btnRef.value, {
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: btnRef.value,
+        start: "top 90%",
+        toggleActions: "play none none none"
+      }
+    })
+  }
 })
 </script>
 
@@ -53,9 +69,14 @@ onMounted(() => {
     <div class="max-w-[1100px] mx-auto max-xl:mx-5">
       <div id="about">
         <div class="sm:space-y-16 space-y-6">
-          <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-3xl text-slate-800 tracking-wide"></h1>
+          <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-4xl text-slate-800 tracking-wide"></h1>
           <div class="flex justify-center pt-5 gap-10">
-            <a id="btn" href="/about" class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300">
+            <a
+              id="btn"
+              ref="btnRef"
+              href="/about"
+              class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300"
+            >
               Lebih Detail
               <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9">
                 <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/>
