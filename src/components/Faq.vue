@@ -80,7 +80,7 @@ watch(openIndex, async () => {
               <span
                 :class="openIndex === i ? 'rotate-180' : ''"
                 class="transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5m0 0l-5 5"/></svg></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="rotate-180" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m17 14l-5-5m0 0l-5 5"/></svg></span>
             </h3>
             <div
               class="overflow-hidden transition-all duration-300"

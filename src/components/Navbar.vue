@@ -133,7 +133,7 @@ export default {
         <!-- Mobile -->
         <div class="lg:hidden flex justify-between items-center">
           <a href="/">
-            <img class="w-12" src="/src/assets/images/pplg.png" alt="">
+            <img class="w-12" src="/src/assets/images/pplg-logo.png" alt="">
           </a>
           <button class="text-white" @click="toggleMenu">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
