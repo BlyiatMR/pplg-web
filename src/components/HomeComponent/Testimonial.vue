@@ -38,7 +38,7 @@ const testimonials = [
             </svg>
           </div>
           <p class="text-base font-medium text-slate-600">{{ item.text }}</p>
-          <div class="flex items-center gap-5 justify-center">
+          <div class="flex items-center gap-5">
             <img class="w-12 h-12 object-cover rounded-full" :src="item.img" :alt="item.name" />
             <div>
               <h1 class="text-lg font-semibold text-slate-800">{{ item.name }}</h1>

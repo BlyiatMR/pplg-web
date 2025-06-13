@@ -88,7 +88,7 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
 };
@@ -115,7 +115,7 @@ export default {
             <a href="/" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Beranda</a>
             <a href="/about" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Profil</a>
             <a href="/alumni" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Alumni</a>
-            <a href="#" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Ekstrakurikuler</a>
+            <a href="/organization" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Ekstrakurikuler</a>
             <a href="/gallery" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Galeri</a>
             <a href="/contact" class="hover:bg-white hover:bg-opacity-10 py-2 px-3 duration-300 rounded-xl">Kontak</a>
           </div>
@@ -165,7 +165,7 @@ export default {
         <a href="/" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Beranda</a>
         <a href="/about" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Profil</a>
         <a href="/alumni" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Alumni</a>
-        <a href="#" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Ekstrakurikuler</a>
+        <a href="/organization" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Ekstrakurikuler</a>
         <a href="/gallery" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Galeri</a>
         <a href="/contact" class="font-semibold tracking-wide hover:text-gray-200 duration-300">Kontak</a>
         <div class="mt-5">
