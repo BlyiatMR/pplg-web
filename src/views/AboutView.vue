@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import BgCircles from '@/components/BgCircles.vue';
 import Navbar from '@/components/Navbar.vue';
 import Cta from '@/components/Cta.vue';
 import Footer from '@/components/Footer.vue';
@@ -8,39 +9,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const siswa = ref(0);
 const alumni = ref(0);
-
-const profiles = ref([
-  {
-    img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
-    name: "Idris Suyupi",
-    position: "Ketua Jurusan & Guru Produktif",
-  },
-  {
-    img: new URL('@/assets/images/teacher/bu_sartika.jpeg', import.meta.url).href,
-    name: "Sartika",
-    position: "Guru Produktif",
-  },
-  {
-    img: new URL('@/assets/images/teacher/bu_aisyah.jpeg', import.meta.url).href,
-    name: "Nur Aisyah Abdullah",
-    position: "Guru Produktif",
-  },
-  {
-    img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
-    name: "Indah Purnama Syahir",
-    position: "Guru Produktif & Wali Kelas X PPLG",
-  },
-  {
-    img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
-    name: "Sulfitriani",
-    position: "Wali Kelas XI PPLG",
-  },
-  {
-    img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
-    name: "Ermiwati Sahwa",
-    position: "Wali Kelas XII PPLG",
-  },
-]);
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
@@ -77,11 +45,7 @@ onMounted(() => {
   <main>
     <div class="relative overflow-hidden z-50">
       <!-- Background circles -->
-      <div class="w-[65rem] h-[65rem] max-2xl:w-[55rem] bg-white rounded-full absolute -left-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] bg-white rounded-full absolute -top-[5rem] -left-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[55rem] h-[55rem] border border-white rounded-full absolute top-20 -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[65rem] h-[65rem] border border-white rounded-full absolute -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] border border-white rounded-full absolute -top-[5rem] -right-[30rem] opacity-10 -z-50"></div>
+      <BgCircles />
 
       <Navbar />
 
@@ -218,3 +182,44 @@ onMounted(() => {
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      profiles: [
+        {
+          img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
+          name: "Idris Suyupi",
+          position: "Ketua Jurusan & Guru Produktif",
+        },
+        {
+          img: new URL('@/assets/images/teacher/bu_sartika.jpeg', import.meta.url).href,
+          name: "Sartika",
+          position: "Guru Produktif",
+        },
+        {
+          img: new URL('@/assets/images/teacher/bu_aisyah.jpeg', import.meta.url).href,
+          name: "Nur Aisyah Abdullah",
+          position: "Guru Produktif",
+        },
+        {
+          img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
+          name: "Indah Purnama Syahir",
+          position: "Guru Produktif & Wali Kelas X PPLG",
+        },
+        {
+          img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
+          name: "Sulfitriani",
+          position: "Wali Kelas XI PPLG",
+        },
+        {
+          img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
+          name: "Ermiwati Sahwa",
+          position: "Wali Kelas XII PPLG",
+        },
+      ]
+    }
+  }
+}
+</script>

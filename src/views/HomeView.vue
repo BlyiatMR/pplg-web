@@ -7,8 +7,9 @@ import Testimonial from '@/components/HomeComponent/Testimonial.vue';
 import Faq from '@/components/Faq.vue';
 import Cta from '@/components/Cta.vue';
 import Footer from '@/components/Footer.vue';
-
+import BgCircles from '@/components/BgCircles.vue';
 </script>
+
 <script>
 import gsap from "gsap";
 
@@ -51,15 +52,9 @@ export default {
 
 <template>
   <main>
-
     <div class="relative overflow-hidden z-50">
-      
-      <div class="w-[65rem] h-[65rem] max-2xl:w-[55rem] bg-white rounded-full absolute -left-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] bg-white rounded-full absolute -top-[5rem] -left-[30rem] opacity-10 -z-50"></div>
 
-      <div class="w-[55rem] h-[55rem] border border-white rounded-full absolute top-20 -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[65rem] h-[65rem] border border-white rounded-full absolute -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] border border-white rounded-full absolute -top-[5rem] -right-[30rem] opacity-10 -z-50"></div>
+      <BgCircles />
 
       <NavbarVue />
 

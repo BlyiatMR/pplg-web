@@ -1,4 +1,5 @@
 <script setup>
+import BgCircles from '@/components/BgCircles.vue';
 import Navbar from '@/components/Navbar.vue';
 import Cta from '@/components/Cta.vue';
 import Footer from '@/components/Footer.vue';
@@ -9,12 +10,8 @@ import Footer from '@/components/Footer.vue';
 
 
     <div class="relative overflow-hidden z-50">
-      <div class="w-[65rem] h-[65rem] max-2xl:w-[55rem] bg-white rounded-full absolute -left-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] bg-white rounded-full absolute -top-[5rem] -left-[30rem] opacity-10 -z-50"></div>
 
-      <div class="w-[55rem] h-[55rem] border border-white rounded-full absolute top-20 -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[65rem] h-[65rem] border border-white rounded-full absolute -right-[30rem] opacity-10 -z-50"></div>
-      <div class="w-[75rem] h-[75rem] border border-white rounded-full absolute -top-[5rem] -right-[30rem] opacity-10 -z-50"></div>
+      <BgCircles />
 
       <Navbar />
 
