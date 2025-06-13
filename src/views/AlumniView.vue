@@ -20,7 +20,7 @@ import Footer from '@/components/Footer.vue';
           <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
             <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">Alumni Jurusan</h1>
             <div class="mx-auto text-center">
-              <a class="text-base font-medium text-white text-center">Beranda > Alumni</a>
+              <p class="text-base font-medium text-white"><a href="/" class="mr-3">Beranda</a> <span class="mr-3 text-gray-300">/</span> Alumni</p>
             </div>
           </div>
         </div>

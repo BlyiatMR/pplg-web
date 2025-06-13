@@ -44,7 +44,7 @@ onUnmounted(() => {
           <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
             <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">Galeri Jurusan</h1>
             <div class="mx-auto text-center">
-              <a class="text-base font-medium text-white text-center">Beranda &gt; Galeri</a>
+              <p class="text-base font-medium text-white"><a href="/" class="mr-3">Beranda</a> <span class="mr-3 text-gray-300">/</span> Galeri</p>
             </div>
           </div>
         </div>

@@ -1,20 +1,3 @@
-<script setup>
-const testimonials = [
-  {
-    img: "/src/assets/images/alumni.jpg",
-    name: "Emil Kusmayadi",
-    year: "Alumni Tahun 2024",
-    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
-  },
-  {
-    img: "/src/assets/images/hafizh.jpg",
-    name: "Muhammad Hafizh",
-    year: "Alumni Tahun 2025",
-    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
-  }
-]
-</script>
-
 <template>
   <section class="bg-slate-50">
     <div class="max-w-[1100px] flex justify-between flex-wrap items-center max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
@@ -50,3 +33,20 @@ const testimonials = [
     </div>
   </section>
 </template>
+
+<script setup>
+const testimonials = [
+  {
+    img: new URL('@/assets/images/alumni.jpg', import.meta.url).href,
+    name: "Emil Kusmayadi",
+    year: "Alumni Tahun 2024",
+    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
+  },
+  {
+    img: new URL('@/assets/images/hafizh.jpg', import.meta.url).href,
+    name: "Muhammad Hafizh",
+    year: "Alumni Tahun 2025",
+    text: "Belajar di PPLG membuka peluang saya berkembang di dunia teknologi!"
+  }
+]
+</script>
