@@ -16,7 +16,7 @@ import Footer from '@/components/Footer.vue';
       <Navbar />
 
       <section class="z-50">
-        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
             <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">Kontak Jurusan</h1>
             <div class="mx-auto text-center">
@@ -27,7 +27,7 @@ import Footer from '@/components/Footer.vue';
       </section>
 
       <section class="bg-slate-50 py-20 space-y-20">
-        <div class="max-w-[1100px] mx-auto max-xl:mx-5 flex">
+        <div class="max-w-[1240px] mx-auto max-xl:mx-5 flex">
           <div class="max-w-4xl mx-auto border border-slate-200 shadow-xl py-20 sm:px-16 px-8 rounded-3xl">
             <h1 class="sm:text-4xl text-3xl text-center text-slate-800 font-semibold tracking-wide"><span class="text-[#7743DB]">Hubungi</span>Kami</h1>
             <p class="text-base font-medium mt-5 text-slate-600 text-center">Jika Anda memiliki pertanyaan atau ingin mendapatkan informasi lebih lanjut tentang Jurusan PPLG, silakan hubungi kami melalui formulir di bawah ini.</p>

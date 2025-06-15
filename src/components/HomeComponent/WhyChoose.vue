@@ -55,7 +55,7 @@ onMounted(() => {
 
 <template>
   <section>
-    <div class="max-w-[1100px] relative mx-auto max-xl:mx-5 py-20">
+    <div class="max-w-[1240px] relative mx-auto max-xl:mx-5 py-20">
       <div class="w-[65rem] h-[65rem] border border-white rounded-full absolute -right-[30rem] opacity-10 -z-50"></div>
       <div class="w-[85rem] h-[75rem] border border-white rounded-full absolute -top-[5rem] -right-[30rem] opacity-10 -z-50"></div>
       <div class="w-[105rem] h-[85rem] border border-white rounded-full absolute -top-[10rem] -right-[30rem] opacity-10 -z-50"></div>

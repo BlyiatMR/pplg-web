@@ -107,7 +107,7 @@ export default {
   <div>
     <!-- Navbar -->
     <nav ref="navbar" class="fixed top-0 left-0 w-full z-[999] bg-transparent transition-all duration-300 border-b border-white border-opacity-10 pb-5">
-      <div class="max-w-[1100px] mx-auto pt-5 max-xl:mx-5">
+      <div class="max-w-[1240px] mx-auto pt-5 max-xl:mx-5">
         <!-- Desktop -->
         <div class="hidden lg:flex text-white justify-between items-center">
           <img class="w-14" src="/src/assets/images/pplg-logo.png" alt="">

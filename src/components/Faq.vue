@@ -63,7 +63,7 @@ watch(openIndex, async () => {
 
 <template>
   <section class="bg-slate-50">
-    <div class="max-w-[1100px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
+    <div class="max-w-[1240px] max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
       <h1 class="font-semibold text-center sm:text-4xl text-3xl text-slate-800 tracking-wide">
         Pertanyaan yang Sering Diajukan
       </h1>

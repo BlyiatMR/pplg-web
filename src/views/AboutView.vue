@@ -51,7 +51,7 @@ onMounted(() => {
 
       <!-- Hero Section -->
       <section class="z-50">
-        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-fit mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
             <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">
               Profil Jurusan
@@ -65,12 +65,12 @@ onMounted(() => {
 
       <!-- About Section -->
       <section class="bg-slate-50 py-20 space-y-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1100px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-between items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-xl space-y-5">
             <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">
               Mengenal Jurusan PPLG
             </h1>
-            <p class="text-base font-medium text-slate-600">
+            <p class="sm:text-lg text-base font-medium text-slate-600">
               Salah satu program keahlian SMK Negeri 1 Pangkajene dan Kepulauan di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game).
               <br><br>
               Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern.
@@ -82,7 +82,7 @@ onMounted(() => {
             <img src="/src/assets/images/pplg-logo.png" class="w-[400px]" alt="">
           </div>
         </div>
-        <div id="count-section" class="max-w-[1100px] mx-auto max-xl:mx-5">
+        <div id="count-section" class="max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-full bg-[#7743DB] flex flex-wrap sm:justify-around justify-center max-sm:gap-10 rounded-3xl px-10 py-10 shadow-xl">
             <div class="flex flex-col items-center gap-3">
               <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">
@@ -102,29 +102,29 @@ onMounted(() => {
 
       <!-- Visi Misi Section -->
       <section class="bg-white py-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1100px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-between items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div>
             <img src="/src/assets/images/class.jpg" class="object-cover object-top rounded-3xl w-[30rem] h-[25rem]" alt="">
           </div>
           <div class="max-w-xl">
             <div class="space-y-5 max-sm:mt-10">
               <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">Visi</h1>
-              <p class="text-base font-medium text-slate-600">
+              <p class="sm:text-lg text-base font-medium text-slate-600">
                 Menjadi jurusan unggulan dalam bidang teknologi informasi yang mencetak lulusan inovatif, kreatif, dan kompeten dalam pengembangan perangkat lunak serta gim, berlandaskan profesionalisme dan nilai-nilai luhur.
               </p>
             </div>
             <div class="mt-10 space-y-5">
               <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">Misi</h1>
-              <p class="text-base font-medium text-slate-600">
+              <p class="sm:text-lg text-base font-medium text-slate-600">
                 1. Membekali siswa dengan kemampuan pemrograman, desain, dan pengelolaan perangkat lunak serta gim berbasis teknologi terkini.
               </p>
-              <p class="text-base font-medium text-slate-600">
+              <p class="sm:text-lg text-base font-medium text-slate-600">
                 2. Menciptakan lingkungan pembelajaran yang mendukung pengembangan ide-ide kreatif dan inovatif di bidang teknologi informasi.
               </p>
-              <p class="text-base font-medium text-slate-600">
+              <p class="sm:text-lg text-base font-medium text-slate-600">
                 3. Menjalin kerja sama strategis dengan perusahaan teknologi untuk memberikan pengalaman praktik langsung melalui magang, pelatihan, dan sertifikasi.
               </p>
-              <p class="text-base font-medium text-slate-600">
+              <p class="sm:text-lg text-base font-medium text-slate-600">
                 4. Membentuk lulusan yang tidak hanya kompeten secara teknis, tetapi juga memiliki etika kerja, tanggung jawab, dan kemampuan beradaptasi dengan perkembangan teknologi global.
               </p>
             </div>
@@ -134,7 +134,7 @@ onMounted(() => {
 
       <!-- Guru Section -->
       <section class="bg-slate-50 py-20">
-        <div class="max-w-[1100px] mx-auto max-xl:mx-5">
+        <div class="max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="relative">
             <h1 class="text-center font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">
               Guru-Guru Produktif PPLG

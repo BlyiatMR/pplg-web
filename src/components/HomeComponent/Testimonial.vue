@@ -1,11 +1,11 @@
 <template>
   <section class="bg-slate-50">
-    <div class="max-w-[1100px] flex justify-between flex-wrap items-center max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
+    <div class="max-w-[1240px] flex justify-around flex-wrap items-center max-xl:gap-10 mx-auto max-xl:mx-5 py-20">
       <div class="max-w-xs relative">
         <h1 class="font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">
           Cerita dari Alumni PPLG
         </h1>
-        <p class="text-base font-medium text-slate-600 mt-5">
+        <p class="sm:text-lg text-base font-medium text-slate-600 mt-5">
           Alumni kami telah membuktikan bahwa dengan semangat belajar dan ilmu yang bermanfaat.
         </p>
       </div>
@@ -25,7 +25,7 @@
             <img class="w-12 h-12 object-cover rounded-full" :src="item.img" :alt="item.name" />
             <div>
               <h1 class="text-lg font-semibold text-slate-800">{{ item.name }}</h1>
-              <p>{{ item.year }}</p>
+              <p class="font-medium text-slate-600">{{ item.year }}</p>
             </div>
           </div>
         </div>

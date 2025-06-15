@@ -66,7 +66,7 @@ onMounted(() => {
 
 <template>
   <section class="bg-slate-50 py-20 space-y-20">
-    <div class="max-w-[1100px] mx-auto max-xl:mx-5">
+    <div class="max-w-[1240px] mx-auto max-xl:mx-5">
       <div id="about">
         <div class="sm:space-y-16 space-y-6">
           <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-4xl text-slate-800 tracking-wide"></h1>
@@ -86,7 +86,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="relative max-w-7xl mx-auto flex gap-10 flex-wrap justify-around mt-28">
+      <div class="relative max-w-7xl mx-auto flex gap-10 flex-wrap justify-center mt-28">
         <div 
           v-for="(item, index) in items"
           :key="index"
