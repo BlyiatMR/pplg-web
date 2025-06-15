@@ -132,7 +132,7 @@ onBeforeUnmount(() => {
         </div>
       </section>
 
-      <!-- Desktop/Tablet: Cards grid dengan animasi -->
+      <!-- Desktop Cards -->
       <section class="bg-primary py-20">
         <div class="max-w-[1100px] flex-wrap gap-10 justify-center mx-auto max-xl:mx-5 hidden sm:flex">
           <div
@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
           </div>
         </div>
 
-        <!-- Mobile -->
+        <!-- Mobile Cards -->
         <div class="sm:hidden flex justify-center">
           <div class="relative w-[90vw] max-w-xs h-[250px] flex items-center overflow-hidden">
             <transition name="slide-x" mode="out-in">
