@@ -65,7 +65,7 @@ onMounted(() => {
 
       <!-- About Section -->
       <section class="bg-slate-50 py-20 space-y-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1240px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-around items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-xl space-y-5">
             <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">
               Mengenal Jurusan PPLG
@@ -102,7 +102,7 @@ onMounted(() => {
 
       <!-- Visi Misi Section -->
       <section class="bg-white py-20">
-        <div class="flex flex-wrap justify-between items-center max-w-[1240px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-around items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div>
             <img src="/src/assets/images/class.jpg" class="object-cover object-top rounded-3xl w-[30rem] h-[25rem]" alt="">
           </div>

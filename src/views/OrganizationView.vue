@@ -139,7 +139,7 @@ onBeforeUnmount(() => {
             v-for="(item, i) in work"
             :key="item.title"
             :ref="el => setCardRef(el, i)">
-            <div class="relative w-[245px] h-full rounded-3xl bg-slate-50 border-t-2 border-t-slate-300 border-b-2 border-b-slate-300 py-5 px-8">
+            <div class="relative w-[255px] h-full rounded-3xl bg-slate-50 border-t-2 border-t-slate-300 border-b-2 border-b-slate-300 py-5 px-8">
               <img src="/src/assets/images/bg-line.png" class="absolute right-0 top-0 w-72" alt="">
               <div class="space-y-2">
                 <img :src="item.src" class="w-16" alt="">
