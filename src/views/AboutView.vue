@@ -82,7 +82,7 @@ onMounted(() => {
       </section>
 
       <!-- About Section -->
-      <section class="bg-slate-50 py-20 space-y-20">
+      <section class="bg-slate-50 py-20 space-y-10">
         <div class="flex flex-wrap justify-around gap-10 items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-xl space-y-5">
             <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">
@@ -107,18 +107,18 @@ onMounted(() => {
           </div>
         </div>
         <div id="count-section" class="max-w-[1240px] mx-auto max-xl:mx-5">
-          <div class="sm:hidden flex flex-wrap justify-center gap-1">
-            <div class="w-[190px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
-              <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">
+          <div class="sm:hidden flex flex-wrap justify-center gap-4">
+            <div class="w-[150px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
+              <p class="text-white font-semibold sm:text-4xl text-2xl tracking-wide">
                 {{ siswaScroll }}+
               </p>
-              <p class="text-white font-medium tracking-wide">Total Siswa</p>
+              <p class="text-white font-medium tracking-wide">Siswa</p>
             </div>
-            <div class="w-[190px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
-              <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">
+            <div class="w-[150px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
+              <p class="text-white font-semibold sm:text-4xl text-2xl tracking-wide">
                 {{ alumniScroll }}+
               </p>
-              <p class="text-white font-medium tracking-wide">Total Alumni</p>
+              <p class="text-white font-medium tracking-wide">Alumni</p>
             </div>
           </div>
         </div>
