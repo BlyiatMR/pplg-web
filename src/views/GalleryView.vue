@@ -101,6 +101,11 @@ onUnmounted(() => {
 <script>
 export const images = [
   {
+    src: new URL('@/assets/images/gallery/gallery-7.jpeg', import.meta.url).href,
+    desc: "Angkatan 5 PPLG Melakukan Kegiatan Kunjungan industri ke perusahaan teknologi.",
+    category: "kunjungan"
+  },
+  {
     src: new URL('@/assets/images/gallery/gallery-5.jpeg', import.meta.url).href,
     desc: "Angkatan 55 Melakukan Kegiatan Kunjungan industri ke perusahaan teknologi.",
     category: "lomba"
@@ -117,7 +122,7 @@ export const images = [
   },
   {
     src: new URL('@/assets/images/gallery/gallery-2.jpeg', import.meta.url).href,
-    desc: "Perwakilan Jurusan PPLG Mengikuti Lomba Web Design di PNUP.",
+    desc: "Angkatan 4 PPLG Mengikuti Lomba Web Design di PNUP.",
     category: "lomba"
   },
   {
@@ -127,7 +132,7 @@ export const images = [
   },
   {
     src: new URL('@/assets/images/gallery/gallery-4.jpeg', import.meta.url).href,
-    desc: "Angkatan 55 Melakukan Kegiatan Kunjungan industri ke perusahaan teknologi.",
+    desc: "Angkatan 4 PPLG Melakukan Kegiatan Kunjungan industri ke perusahaan teknologi.",
     category: "kunjungan"
   }
 ]

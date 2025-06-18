@@ -47,7 +47,7 @@ import Footer from '@/components/Footer.vue';
                 <textarea id="textarea" type="textarea" placeholder="Deskripsi" class="text-gray-700/80 block w-full py-5 px-4 mt-2 bg-white border border-gray-300 focus:ring-transparent focus:border-gray-700/25 rounded-lg h-32"></textarea>
               </div>
               <div class="mt-10 flex justify-center">
-                <a href="#" class="flex w-fit justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-32 duration-300">Kirim <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9"><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg></a>
+                <a href="#" class="flex w-fit justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[128px] duration-300">Kirim <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9"><path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/><path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/></svg></a>
               </div>
             </form>
           </div>

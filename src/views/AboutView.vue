@@ -9,33 +9,51 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const siswa = ref(0);
 const alumni = ref(0);
+const siswaScroll = ref(0);
+const alumniScroll = ref(0);
 
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Count tanpa scroll
   gsap.to(siswa, {
     value: 250,
-    duration: 2,
-    scrollTrigger: {
-      trigger: "#count-section",
-      start: "top 80%",
-      once: true,
-    },
+    duration: 3,
     onUpdate: () => {
       siswa.value = Math.floor(siswa.value);
     }
   });
-
   gsap.to(alumni, {
     value: 250,
-    duration: 2,
+    duration: 3,
+    onUpdate: () => {
+      alumni.value = Math.floor(alumni.value);
+    }
+  });
+
+  // Count discroll
+  gsap.to(siswaScroll, {
+    value: 250,
+    duration: 3,
     scrollTrigger: {
       trigger: "#count-section",
       start: "top 80%",
       once: true,
     },
     onUpdate: () => {
-      alumni.value = Math.floor(alumni.value);
+      siswaScroll.value = Math.floor(siswaScroll.value);
+    }
+  });
+  gsap.to(alumniScroll, {
+    value: 250,
+    duration: 3,
+    scrollTrigger: {
+      trigger: "#count-section",
+      start: "top 80%",
+      once: true,
+    },
+    onUpdate: () => {
+      alumniScroll.value = Math.floor(alumniScroll.value);
     }
   });
 });
@@ -65,34 +83,40 @@ onMounted(() => {
 
       <!-- About Section -->
       <section class="bg-slate-50 py-20 space-y-20">
-        <div class="flex flex-wrap justify-around items-center max-w-[1240px] mx-auto max-xl:mx-5">
+        <div class="flex flex-wrap justify-around gap-10 items-center max-w-[1240px] mx-auto max-xl:mx-5">
           <div class="max-w-xl space-y-5">
             <h1 class="max-w-7xl mx-auto font-semibold sm:text-4xl text-3xl text-slate-800 leading-tight">
               Mengenal Jurusan PPLG
             </h1>
             <p class="sm:text-lg text-base font-medium text-slate-600">
-              Salah satu program keahlian SMK Negeri 1 Pangkajene dan Kepulauan di bidang teknologi informasi yang berfokus pada pembelajaran tentang pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game).
+              <span class="font-semibold text-slate-800">Salah satu program keahlian SMK Negeri 1 Pangkajene dan Kepulauan</span> di bidang teknologi informasi yang berfokus pada pembelajaran tentang <span class="font-semibold text-slate-800">pembuatan, pengembangan, dan pengelolaan perangkat lunak (software) serta gim (game).</span>
               <br><br>
-              Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam merancang aplikasi, membangun website, menciptakan gim interaktif, serta memahami prinsip-prinsip teknologi pemrograman modern.
+              Jurusan ini bertujuan untuk mencetak lulusan yang kompeten dalam <span class="font-semibold text-slate-800">merancang aplikasi, membangun website, menciptakan gim interaktif,</span> serta memahami prinsip-prinsip teknologi pemrograman modern.
               <br><br>
-              Melalui kurikulum yang terus diperbarui sesuai dengan perkembangan teknologi, jurusan ini menjadi pilihan yang tepat bagi siswa yang ingin menjadi bagian dari ekosistem digital yang dinamis dan inovatif.
+              Melalui <span class="font-semibold text-slate-800">kurikulum yang terus diperbarui</span> sesuai dengan perkembangan teknologi, jurusan ini menjadi pilihan yang tepat bagi siswa yang ingin menjadi bagian dari <span class="font-semibold text-slate-800">ekosistem digital yang dinamis dan inovatif.</span>
             </p>
           </div>
-          <div class="max-sm:mt-10">
-            <img src="/src/assets/images/pplg-logo.png" class="w-[400px]" alt="">
+          <div id="count-section" class="relative max-sm:mt-10">
+            <div class="max-sm:hidden absolute top-0 left-0 bg-primary px-5 py-[32px] rounded-3xl border-t-4 border-t-[#B79FEB] w-[149px] text-base text-center text-white font-medium leading-snug">
+              <span class="text-xl font-semibold">{{ siswa }}+</span> <br>Total Siswa
+            </div>
+            <div class="max-sm:hidden absolute top-[115px] left-0 bg-primary px-5 py-[32px] border-t-4 border-t-[#B79FEB] rounded-3xl w-[149px] mt-[4px] text-base text-center text-white font-medium leading-snug">
+              <span class="text-xl font-semibold">{{ alumni }}+</span> <br>Total Alumni
+            </div>
+            <img src="/src/assets/images/img-profile.png" class="w-[470px]" alt="">
           </div>
         </div>
         <div id="count-section" class="max-w-[1240px] mx-auto max-xl:mx-5">
-          <div class="max-w-full bg-[#7743DB] flex flex-wrap sm:justify-around justify-center max-sm:gap-10 rounded-3xl px-10 py-10 shadow-xl">
-            <div class="flex flex-col items-center gap-3">
+          <div class="sm:hidden flex flex-wrap justify-center gap-1">
+            <div class="w-[190px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
               <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">
-                {{ siswa }}+
+                {{ siswaScroll }}+
               </p>
               <p class="text-white font-medium tracking-wide">Total Siswa</p>
             </div>
-            <div class="flex flex-col items-center gap-3">
+            <div class="w-[190px] bg-[#7743DB] border-t-4 border-t-[#B79FEB] rounded-3xl px-10 py-10 shadow-xl flex flex-col items-center gap-3">
               <p class="text-white font-semibold sm:text-4xl text-3xl tracking-wide">
-                {{ alumni }}+
+                {{ alumniScroll }}+
               </p>
               <p class="text-white font-medium tracking-wide">Total Alumni</p>
             </div>

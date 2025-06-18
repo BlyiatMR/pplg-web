@@ -22,7 +22,7 @@ onMounted(() => {
   const spans = typingText.value.querySelectorAll('span')
   gsap.to(spans, {
     opacity: 1,
-    duration: 0.05,
+    duration: 0.5,
     stagger: 0.03,
     ease: 'power2.out',
     scrollTrigger: {
@@ -67,23 +67,21 @@ onMounted(() => {
 <template>
   <section class="bg-slate-50 py-20 space-y-20">
     <div class="max-w-[1240px] mx-auto max-xl:mx-5">
-      <div id="about">
-        <div class="sm:space-y-16 space-y-6">
-          <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-4xl text-slate-800 tracking-wide"></h1>
-          <div class="flex justify-center pt-5 gap-10">
-            <a
-              id="btn"
-              ref="btnRef"
-              href="/about"
-              class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300"
-            >
-              Lebih Detail
-              <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9">
-                <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/>
-                <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/>
-              </svg>
-            </a>
-          </div>
+      <div class="sm:space-y-16 space-y-6">
+        <h1 ref="typingText" class="max-w-[1120px] mx-auto text-center font-medium sm:text-8xl text-4xl text-slate-800 tracking-wide"></h1>
+        <div class="flex justify-center pt-5 gap-10">
+          <a
+            id="btn"
+            ref="btnRef"
+            href="/about"
+            class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300"
+          >
+            Lebih Detail
+            <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9">
+              <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/>
+              <path fill="currentColor" d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"/>
+            </svg>
+          </a>
         </div>
       </div>
       <div class="relative max-w-7xl mx-auto flex gap-10 flex-wrap justify-center mt-28">
@@ -91,8 +89,8 @@ onMounted(() => {
           v-for="(item, index) in items"
           :key="index"
           :ref="el => cardRefs[index] = el"
-          class="w-[335px] border border-slate-200 shadow-xl py-5 sm:px-10 px-6 rounded-3xl"
-        >
+          class="w-[335px] border border-slate-200 shadow-xl py-5 sm:px-10 px-6 rounded-3xl relative overflow-hidden">
+          <img src="/src/assets/images/bg-line.png" class="absolute right-0 -top-2 w-72" alt="">
           <svg class="w-20" xmlns="http://www.w3.org/2000/svg" :viewBox="item.viewBox" v-html="item.icon"></svg>
           <div class="mt-5 cursor-default">
             <h1 class="text-lg text-slate-800 font-semibold">{{ item.title }}</h1>
