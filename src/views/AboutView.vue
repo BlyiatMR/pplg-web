@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import BgCircles from '@/components/BgCircles.vue';
 import Navbar from '@/components/Navbar.vue';
 import Cta from '@/components/Cta.vue';
@@ -57,6 +57,65 @@ onMounted(() => {
     }
   });
 });
+
+// Carousel logic
+const profiles = [
+  {
+    img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
+    name: "Idris Suyupi",
+    position: "Guru Produktif",
+  },
+  {
+    img: new URL('@/assets/images/teacher/bu_aisyah.jpeg', import.meta.url).href,
+    name: "Nur Aisyah Abdullah",
+    position: "Guru Produktif",
+  },
+  {
+    img: new URL('@/assets/images/teacher/bu_sartika.jpeg', import.meta.url).href,
+    name: "Sartika",
+    position: "Guru Produktif",
+  },
+  {
+    img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
+    name: "Indah Purnama Syahir",
+    position: "Guru Produktif",
+  },
+  {
+    img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
+    name: "Sulfitriani",
+    position: "Wali Kelas XI PPLG",
+  },
+  {
+    img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
+    name: "Ermiwati Sahwa",
+    position: "Wali Kelas XII PPLG",
+  },
+]
+
+const carouselRef = ref(null)
+let tl = null
+
+onMounted(async () => {
+  await nextTick()
+  // Duplikat 3x agar benar-benar seamless
+  const cards = carouselRef.value.querySelectorAll('.carousel-card')
+  const cardWidth = cards[0].offsetWidth + 40 // 40px gap-10
+  const originalCards = profiles.length
+  const loopWidth = cardWidth * originalCards
+
+  tl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } })
+  tl.to(carouselRef.value, {
+    x: `-=${loopWidth}`,
+    duration: originalCards * 5,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % loopWidth)
+    }
+  })
+})
+
+onUnmounted(() => {
+  if (tl) tl.kill()
+})
 </script>
 
 <template>
@@ -159,44 +218,85 @@ onMounted(() => {
       <!-- Guru Section -->
       <section class="bg-slate-50 py-20">
         <div class="max-w-[1240px] mx-auto max-xl:mx-5">
-          <div class="relative">
-            <h1 class="text-center font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">
-              Guru-Guru Produktif PPLG
-            </h1>
-          </div>
-          <div class="flex flex-wrap gap-10 mt-20 justify-center">
-            <div
-              v-for="(profile, index) in profiles"
-              :key="index"
-              class="relative bg-white rounded-3xl shadow-xl"
-            >
-              <img :src="profile.img" class="rounded-t-3xl w-80 h-96 object-cover" alt="" />
-              <div class="justify-between items-end py-3 px-5">
-                <div class="space-y-2">
-                  <p class="text-lg text-slate-800 group-hover:text-white duration-300 font-semibold">
-                    {{ profile.name }}
-                  </p>
-                </div>
-                <div class="flex items-center justify-between">
-                  <div>
-                    <p class="w-40 text-base text-slate-600 duration-300">
-                      {{ profile.position }}
+          <div class="flex flex-wrap gap-5 justify-around">
+            <div class="max-w-lg sm:pt-10 pt-0 space-y-5">
+              <h1 class="font-semibold sm:text-4xl text-3xl text-slate-800 tracking-wide leading-tight">
+                Pengelola dan Tenaga Pendidik PPLG
+              </h1>
+              <p class="sm:text-lg text-base font-medium text-slate-600">
+                Menampilkan jajaran pimpinan sekolah dan tenaga pendidik yang berperan dalam pelaksanaan pembelajaran di jurusan PPLG.
+              </p>
+            </div>
+            <div class="flex flex-wrap justify-around gap-10 pb-20">
+              <div
+                v-for="(profile, idx) in profilesh"
+                :key="idx"
+                class="carousel-card relative max-w-[280px] bg-white rounded-3xl shadow-xl">
+                <img :src="profile.img" class="rounded-t-3xl w-80 h-80 object-cover object-top" alt="" />
+                <div class="justify-between items-end py-3 px-5">
+                  <div class="space-y-2">
+                    <p class="text-lg text-slate-800 font-semibold">
+                      {{ profile.name }}
                     </p>
                   </div>
-                  <div class="flex gap-3">
-                    <a href="">
-                      <i class="fa-brands fa-instagram text-slate-600 text-2xl"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa-brands fa-facebook text-slate-600 text-2xl"></i>
-                    </a>
-                    <a href="">
-                      <i class="fa-brands fa-linkedin text-slate-600 text-2xl"></i>
-                    </a>
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="w-40 text-base text-slate-600">
+                        {{ profile.position }}
+                      </p>
+                    </div>
+                    <div class="flex gap-3">
+                      <a href="">
+                        <i class="fa-brands fa-instagram text-slate-600 text-2xl"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa-brands fa-facebook text-slate-600 text-2xl"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="relative overflow-hidden w-full pb-10">
+            <!-- Shadow kanan kiri -->
+            <div class="sm:flex hidden pointer-events-none absolute -top-20 -left-10 h-[50rem] w-20 z-20 bg-slate-50 blur-[14px]"></div>
+            <div class="sm:flex hidden pointer-events-none absolute -top-20 -right-10 h-[50rem] w-20 z-20 bg-slate-50 blur-[14px]"></div>
+            <!-- Carousel -->
+            <div
+              ref="carouselRef"
+              class="flex gap-10"
+              style="will-change: transform;">
+              <div
+                v-for="(profile, idx) in [...profiles, ...profiles, ...profiles]"
+                :key="idx"
+                class="carousel-card relative max-w-[280px] bg-white rounded-3xl shadow-xl">
+                <img :src="profile.img" class="rounded-t-3xl w-80 h-80 object-cover object-top" alt="" />
+                <div class="justify-between items-end py-3 px-5">
+                  <div class="space-y-2">
+                    <p class="text-lg text-slate-800 font-semibold">
+                      {{ profile.name }}
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="w-40 text-base text-slate-600">
+                        {{ profile.position }}
+                      </p>
+                    </div>
+                    <div class="flex gap-3">
+                      <a href="">
+                        <i class="fa-brands fa-instagram text-slate-600 text-2xl"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa-brands fa-facebook text-slate-600 text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Carousel -->
           </div>
         </div>
       </section>
@@ -211,38 +311,18 @@ onMounted(() => {
 export default {
   data() {
     return {
-      profiles: [
+      profilesh: [
+        {
+          img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
+          name: "Drs. Syahruddin Rahmat",
+          position: "Kepala UPT SMKN 1 Pangkep",
+        },
         {
           img: new URL('@/assets/images/teacher/pak_idris.jpeg', import.meta.url).href,
           name: "Idris Suyupi",
-          position: "Ketua Jurusan & Guru Produktif",
+          position: "Ketua Jurusan PPLG",
         },
-        {
-          img: new URL('@/assets/images/teacher/bu_sartika.jpeg', import.meta.url).href,
-          name: "Sartika",
-          position: "Guru Produktif",
-        },
-        {
-          img: new URL('@/assets/images/teacher/bu_aisyah.jpeg', import.meta.url).href,
-          name: "Nur Aisyah Abdullah",
-          position: "Guru Produktif",
-        },
-        {
-          img: new URL('@/assets/images/teacher/bu_indah.jpeg', import.meta.url).href,
-          name: "Indah Purnama Syahir",
-          position: "Guru Produktif & Wali Kelas X PPLG",
-        },
-        {
-          img: new URL('@/assets/images/teacher/bu_sul.jpeg', import.meta.url).href,
-          name: "Sulfitriani",
-          position: "Wali Kelas XI PPLG",
-        },
-        {
-          img: new URL('@/assets/images/teacher/bu_ermi.jpeg', import.meta.url).href,
-          name: "Ermiwati Sahwa",
-          position: "Wali Kelas XII PPLG",
-        },
-      ]
+      ],
     }
   }
 }

@@ -74,8 +74,7 @@ onMounted(() => {
             id="btn"
             ref="btnRef"
             href="/about"
-            class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300"
-          >
+            class="flex w-[190px] justify-between bg-yellow-400 py-2 px-5 rounded-lg tracking-wide font-semibold hover:w-[200px] duration-300">
             Lebih Detail
             <svg class="w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9">
               <path fill="currentColor" d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"/>
@@ -133,16 +132,16 @@ export const items = [
     icon: `<path class="fill-slate-800 group-hover:fill-white duration-300" d="M11.5 4a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM11 6.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/><path class="fill-slate-800 group-hover:fill-white duration-300" fill-rule="evenodd" d="M3 1C1.34 1 0 2.34 0 4v8c0 1.66 1.34 3 3 3h10c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3zm10 1h-3v12h3c1.1 0 2-.895 2-2V4c0-1.1-.895-2-2-2M3 2h6v12H3c-1.1 0-2-.895-2-2V4c0-1.1.895-2 2-2" clip-rule="evenodd"/>`
   },
   {
-    title: "IoT",
+    title: "IoT (Internet of Things)",
     description: "Mengembangkan hardware dengan internet.",
     viewBox: "0 0 36 36",
     icon: `<path class="fill-slate-800 group-hover:fill-white duration-300" d="M30.86 20.94a4.7 4.7 0 0 1 1.86.64h.05a15.1 15.1 0 0 0-.61-8.37a1 1 0 0 0-1.28-.59a1 1 0 0 0-.59 1.28a13.2 13.2 0 0 1 .57 7.04m-4.53 7.64a13 13 0 0 1-6.07 2.82a1 1 0 1 0 .17 2h.18a15.16 15.16 0 0 0 7.21-3.4v-.07a4.7 4.7 0 0 1-1.49-1.35m-10.71 2.76a13.2 13.2 0 0 1-4.29-1.61a15 15 0 0 1-1.63-1.11A4.7 4.7 0 0 1 8.24 30a16 16 0 0 0 2.07 1.48a15.4 15.4 0 0 0 4.94 1.86h.19a1 1 0 0 0 .18-2M4.56 21.15a4 4 0 0 0 .6-.09A13 13 0 0 1 5.7 14a1 1 0 0 0-1.88-.69a15 15 0 0 0-.56 8.43a4.8 4.8 0 0 1 1.3-.59"/><path class="fill-slate-800 group-hover:fill-white duration-300" d="M31.9 23a3.2 3.2 0 0 0-2.43-.42a3.3 3.3 0 0 0-1.4.77l-3.87-2.24a6.87 6.87 0 0 0-2.77-8.43l-.11-.07a6.6 6.6 0 0 0-2.42-.81V8a3.22 3.22 0 0 0 1.88-1.5A3.3 3.3 0 0 0 19.65 2a3.15 3.15 0 0 0-2.42-.32a3.24 3.24 0 0 0-2 1.51a3.3 3.3 0 0 0 1.13 4.46a3 3 0 0 0 .74.35v3.8a6.64 6.64 0 0 0-4.86 3.28a6.85 6.85 0 0 0-.42 6l-4 2.29a4 4 0 0 0-.45-.34A3.2 3.2 0 0 0 3 24.21a3.3 3.3 0 0 0 1.1 4.46a3.2 3.2 0 0 0 1.65.46a3 3 0 0 0 .78-.1a3.24 3.24 0 0 0 2.29-4.11l3.88-2.24a7.1 7.1 0 0 0 1.89 1.71a6.49 6.49 0 0 0 8.73-1.7l3.83 2.21a3.29 3.29 0 0 0 1.45 3.64a3.15 3.15 0 0 0 1.64.46A3.17 3.17 0 0 0 33 27.41A3.3 3.3 0 0 0 31.9 23M7 26.62a1.4 1.4 0 0 1-.91.64A1.36 1.36 0 0 1 5 27.11a1.48 1.48 0 0 1-.5-2a1.4 1.4 0 0 1 .88-.66a1.3 1.3 0 0 1 .34-.05a1.4 1.4 0 0 1 .75.22a1.48 1.48 0 0 1 .53 2m9.78-22.53a1.4 1.4 0 0 1 .88-.66a1.3 1.3 0 0 1 .34-.05a1.4 1.4 0 0 1 .72.2a1.48 1.48 0 0 1 .5 2a1.4 1.4 0 0 1-.88.66a1.36 1.36 0 0 1-1.06-.15a1.48 1.48 0 0 1-.5-2m2.41 19.32a4.8 4.8 0 0 1-3.68-.54A5.07 5.07 0 0 1 13.78 16A4.88 4.88 0 0 1 18 13.57a4.8 4.8 0 0 1 2.46.67a5.07 5.07 0 0 1 1.73 6.87a4.86 4.86 0 0 1-3 2.3m12.25 3.08a1.45 1.45 0 0 1-.88.67A1.36 1.36 0 0 1 29.5 27a1.48 1.48 0 0 1-.5-2a1.4 1.4 0 0 1 .9-.72a2 2 0 0 1 .34 0a1.3 1.3 0 0 1 .69.19a1.48 1.48 0 0 1 .51 2.02M8.05 10a13 13 0 0 1 5.35-3.77a5 5 0 0 1-.17-2.07a15.15 15.15 0 0 0-6.7 4.51A1 1 0 0 0 8.05 10"/><path class="fill-slate-800 group-hover:fill-white duration-300" d="M24.67 7.23A13.1 13.1 0 0 1 27.93 10a1 1 0 1 0 1.52-1.3a15 15 0 0 0-3.76-3.2a16 16 0 0 0-2.94-1.33a4.8 4.8 0 0 1-.15 2.06a14 14 0 0 1 2.07 1"/><path fill="none" d="M0 0h36v36H0z"/>`
   },
   {
-    title: "Flowchart",
-    description: "Representasi visual dari proses menggunakan simbol.",
-    viewBox: "0 0 20 20",
-    icon: `<path class="fill-slate-800 group-hover:fill-white duration-300" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v2A1.5 1.5 0 0 0 4.5 8H5v3.84a1 1 0 0 0-.207.16L3 13.793a1 1 0 0 0 0 1.414L4.793 17a1 1 0 0 0 1.414 0L8 15.207q.094-.095.16-.207H12v.5a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5v-2a1.5 1.5 0 0 0-1.5-1.5h-2a1.5 1.5 0 0 0-1.5 1.5v.5H8.16a1 1 0 0 0-.16-.207L6.207 12A1 1 0 0 0 6 11.84V8h.5A1.5 1.5 0 0 0 8 6.5v-2A1.5 1.5 0 0 0 6.5 3zM4 4.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm-.293 10L5.5 12.707L7.293 14.5L5.5 16.293zM13.5 13h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5"/>`
+    title: "AI (Artificial Intelligence)",
+    description: "Mengembangkan sistem cerdas berbasis data dan algoritma.",
+    viewBox: "0 0 24 24",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-20 stroke-slate-800" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor"><path d="M4 16.5a3 3 0 0 0 3 3a2.5 2.5 0 0 0 5 0a2.5 2.5 0 1 0 5 0a3 3 0 0 0 2.567-4.553a3.001 3.001 0 0 0 0-5.893A3 3 0 0 0 17 4.5a2.5 2.5 0 1 0-5 0a2.5 2.5 0 0 0-5 0a3 3 0 0 0-2.567 4.553a3.001 3.001 0 0 0 0 5.893A3 3 0 0 0 4 16.5"/><path d="m7.5 14.5l1.842-5.526a.694.694 0 0 1 1.316 0L12.5 14.5m3-6v6m-7-2h3"/></g></svg>`
   },
   {
     title: "Basis Data",
