@@ -53,7 +53,6 @@ export default {
 <template>
   <main>
     <div class="relative overflow-hidden z-50">
-
       <BgCircles />
 
       <NavbarVue />
@@ -71,7 +70,6 @@ export default {
       <Cta />
 
       <Footer />
-
     </div>
   </main>
 </template>

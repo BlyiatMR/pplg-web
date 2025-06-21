@@ -1,9 +1,12 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
-import BgCircles from '@/components/BgCircles.vue';
+import BgCircles from '@/components/BgCircles.vue'
 import Navbar from '@/components/Navbar.vue'
 import Cta from '@/components/Cta.vue'
 import Footer from '@/components/Footer.vue'
+import InnerPageHero from '@/components/InnerPageHero.vue'
+import GalleryCategoryNav from '@/components/GalleryComponent/GalleryCategoryNav.vue'
+import GalleryGrid from '@/components/GalleryComponent/GalleryGrid.vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { Fancybox } from "@fancyapps/ui"
 import "@fancyapps/ui/dist/fancybox/fancybox.css"
 
@@ -45,90 +48,39 @@ onUnmounted(() => {
 <template>
   <main>
     <div class="relative overflow-hidden z-50">
-
       <BgCircles />
 
       <Navbar />
 
-      <section class="z-50">
-        <div class="max-w-[1240px] mx-auto max-xl:mx-5">
-          <div class="max-w-4xl mx-auto w-fit space-y-5 sm:pt-52 pb-20 pt-40">
-            <h1 id="title" class="sm:text-4xl text-3xl text-white font-semibold tracking-wide text-center leading-tight">Galeri Jurusan</h1>
-            <div class="mx-auto text-center">
-              <p class="text-base font-medium text-white"><a href="/" class="mr-3">Beranda</a> <span class="mr-3 text-gray-300">/</span> Galeri</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <InnerPageHero title="Galeri Jurusan" breadcrumb="Galeri" />
 
       <section class="bg-slate-50 py-20 space-y-20">
         <div class="max-w-[1240px] mx-auto max-xl:mx-5">
-          <div>
-            <nav>
-              <ul class="flex flex-wrap sm:justify-center justify-start sm:gap-8 gap-y-2 gap-x-7">
-                <li v-for="cat in categories" :key="cat.value">
-                  <button
-                    class="text-base font-semibold px-3 py-2 rounded-md transition-colors"
-                    :class="activeCategory === cat.value
-                      ? 'bg-[#926cd9] text-white'
-                      : 'text-slate-800 hover:bg-[#926cd9] hover:text-white'"
-                    @click="activeCategory = cat.value">
-                    {{ cat.label }}
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="mt-10 flex flex-wrap justify-center gap-5">
-            <a
-              v-for="img in displayedImages"
-              :key="img.src"
-              :href="img.src"
-              data-fancybox="gallery"
-              :data-caption="img.desc"
-              class="block"
-              style="outline:none">
-              <div class="relative w-80 h-80">
-                <img
-                  class="w-80 h-80 object-cover bg-primary rounded-3xl border-t-[6px] border-[#B79FEB] cursor-pointer transition shadow-xl"
-                  :src="img.src"
-                  :alt="img.desc"
-                />
-                <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs px-4 py-2 rounded-b-3xl">
-                  <span class="block">{{ img.desc }}</span>
-                  <span class="block mt-1">Upload: {{ new Date(img.date).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' }) }}</span>
-                </div>
-              </div>
-            </a>
-            <div v-if="filteredImages.length === 0" class="text-slate-500 text-center w-full py-10">
-              Tidak ada gambar pada kategori ini.
-            </div>
-          </div>
-          <div v-if="filteredImages.length > 3 && !showAll[activeCategory]" class="flex justify-center mt-8">
-            <button
-              @click="showMore"
-              class="bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              Lihat Semua Gambar
-            </button>
-          </div>
-          <div v-if="filteredImages.length > 3 && showAll[activeCategory]" class="flex justify-center mt-4">
-            <button
-              @click="showLess"
-              class="bg-slate-200 text-slate-700 px-6 py-2 rounded-lg font-semibold hover:bg-slate-300 transition">
-              Tampilkan Lebih Sedikit
-            </button>
-          </div>
+          <GalleryCategoryNav
+            :categories="categories"
+            :activeCategory="activeCategory"
+            @update:activeCategory="val => activeCategory = val"
+          />
+          <GalleryGrid
+            :displayedImages="displayedImages"
+            :filteredImages="filteredImages"
+            :showAll="showAll"
+            :showMore="showMore"
+            :showLess="showLess"
+            :activeCategory="activeCategory"
+          />
         </div>
       </section>
 
       <Cta />
+
       <Footer />
     </div>
   </main>
 </template>
 
 <script>
-export const images = [
+const images = [
   {
     src: new URL('@/assets/images/gallery/gallery-7.jpeg', import.meta.url).href,
     desc: "Angkatan 5 PPLG Melakukan Kegiatan Kunjungan industri ke PT. Rupa Raya Indonesia.",
